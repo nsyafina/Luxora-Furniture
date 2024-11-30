@@ -101,56 +101,56 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label style="font-weight: normal;">Provinsi</label>
-                            <select name="provinsi" class="form-control"></select>
+                            <select required name="provinsi" class="form-control"></select>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label style="font-weight: normal;">Kota/Kabupaten</label>
-                            <select name="kota" class="form-control"></select>
+                            <select required name="kota" class="form-control"></select>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label style="font-weight: normal;">Expedisi</label>
-                            <select name="expedisi" class="form-control"></select>
+                            <select required name="expedisi" class="form-control"></select>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label style="font-weight: normal;">Paket</label>
-                            <select name="paket" class="form-control"></select>
+                            <select required name="paket" class="form-control"></select>
                         </div>
                     </div>
 
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label style="font-weight: normal;">Alamat Lengkap</label>
-                            <input name="alamat" class="form-control" required>
+                            <input required name="alamat" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label style="font-weight: normal;">Kode Pos</label>
-                            <input name="kode_pos" class="form-control" required>
+                            <input required name="kode_pos" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-sm-7">
                         <div class="form-group">
                             <label style="font-weight: normal;">Nama Penerima</label>
-                            <input name="nama_penerima" class="form-control" required>
+                            <input required name="nama_penerima" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-sm-5">
                         <div class="form-group">
                             <label style="font-weight: normal;">No. Telp Penerima</label>
-                            <input name="hp_penerima" class="form-control" required>
+                            <input required name="hp_penerima" class="form-control" required>
                         </div>
                     </div>
 

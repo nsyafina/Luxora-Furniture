@@ -405,76 +405,50 @@
     text-align: center;
   }
 
-  .keen-slider {
-    display: flex;
+  .slider-wrapper {
     overflow: hidden;
-    background: transparent;
-    padding: 0;
+    position: relative;
   }
 
-  .keen-slider__slide {
-    flex: 0 0 auto;
-    transition: opacity 0.5s;
-    opacity: 0.4;
-    padding: 24px;
+  .slider {
+    display: flex;
+    transition: transform 0.75s ease;
   }
 
-  .keen-slider__slide.active {
-    opacity: 1;
-  }
-
-  .slide-content {
-    background: linear-gradient(139deg, rgba(246, 211, 77, 1) 0%, rgba(242, 222, 149, 1) 11%, rgba(238, 233, 225, 1) 32%, rgba(238, 233, 225, 1) 42%, rgba(196, 134, 123, 1) 100%);
-    border-radius: 8px;
-    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
-    padding: 24px;
+  .slide {
+    min-width: 100%;
+    flex-shrink: 0;
     text-align: center;
   }
 
   .slide-content img {
-    border-radius: 50%;
     width: 150px;
     height: 150px;
+    border-radius: 50%;
     object-fit: cover;
-    margin: auto;
   }
 
-  .slide-content p {
-    margin-top: 12px;
-    font-size: 1rem;
-    color: #333;
-  }
-
-  .slide-content .name {
+  .name {
     font-weight: bold;
+    margin-top: 8px;
   }
 
   .slider-controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    margin-top: 24px;
+    margin-top: 16px;
   }
 
   .slider-controls button {
     background: none;
-    border: none;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
     cursor: pointer;
-    color: white;
-    font-size: 24px;
-    transition: color 0.3s;
-  }
-
-  .slider-controls button:hover {
-    color: white;
   }
 
   .slider-counter {
-    font-size: 0.875rem;
-    color: white;
-    text-align: center;
-    width: 40px;
+    margin: 0 16px;
   }
 
   /*--------------------- OUR TEAM ------------------------*/

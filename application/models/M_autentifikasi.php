@@ -30,6 +30,11 @@ class M_autentifikasi extends CI_Model
     {
         $this->db->insert('user', $data);
     }
+
+    public function get_by_username($username)
+    {
+        return $this->db->where('username', $username)->get('user')->row();
+    }
 }
 
 /* End of file M_autentifikasi.php */

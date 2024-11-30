@@ -20,7 +20,6 @@ class Pelanggan extends CI_Controller
         );
         $this->load->view('layout/v_wrapper_backend', $data, FALSE);
     }
-
     public function register()
     {
         $this->form_validation->set_rules(
@@ -58,12 +57,13 @@ class Pelanggan extends CI_Controller
             $data = array(
                 'nama_pelanggan' => $this->input->post('nama_pelanggan'),
                 'email' => $this->input->post('email'),
-                'password' => $this->input->post('password'),
+                'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
+                'foto' => 'default1.jpeg',
 
             );
             $this->m_pelanggan->register($data);
             $this->session->set_flashdata('pesan', ' Register berhasil, silahkan login kembali!');
-            redirect('pelanggan/register');
+            redirect('pelanggan/login');
         }
     }
 
@@ -128,7 +128,23 @@ class Pelanggan extends CI_Controller
         if ($this->form_validation->run() == TRUE) {
             $email = $this->input->post('email');
             $password = $this->input->post('password');
-            $this->pelanggan_login->login($email, $password);
+
+            // Ambil data pelanggan berdasarkan email
+            $pelanggan = $this->m_pelanggan->get_by_email($email);
+
+            if ($pelanggan && password_verify($password, $pelanggan->password)) {
+                // Simpan data ke session
+                $this->session->set_userdata(array(
+                    'id_pelanggan' => $pelanggan->id_pelanggan,
+                    'nama_pelanggan' => $pelanggan->nama_pelanggan,
+                    'email' => $pelanggan->email,
+                    'foto' => $pelanggan->foto
+                ));
+                redirect('pelanggan/akun');
+            } else {
+                $this->session->set_flashdata('error', 'Email atau password salah!');
+                redirect('pelanggan/login');
+            }
         }
 
         $data = array(
@@ -137,6 +153,7 @@ class Pelanggan extends CI_Controller
         );
         $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
     }
+
 
     public function logout()
     {
@@ -148,81 +165,94 @@ class Pelanggan extends CI_Controller
         //proteksi halaman
         $this->pelanggan_login->proteksi_halaman();
 
-        $data = array(
-            'title' => 'Profil Saya',
-            'isi' => 'pelanggan/v_akun_saya',
-        );
-        $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
+        $pelanggan = $this->m_pelanggan->cekData(['email' => $this->session->userdata('email')])->row_array();
+        // Cek apakah data ditemukan
+        if ($pelanggan) {
+            // Simpan data foto dan nama pengguna di session
+            $this->session->set_userdata('foto', $pelanggan['foto']);
+            $this->session->set_userdata('nama_pelanggan', $pelanggan['nama_pelanggan']);
+
+            // Tambahkan data user ke array
+            $data = [
+                'title' => 'Profile Saya',
+                'pelanggan' => (object) $pelanggan, // Kirimkan $user sebagai object
+                'isi' => 'pelanggan/v_akun_saya',
+            ];
+            $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
+        } else {
+            // Redirect jika user tidak ditemukan
+            $this->session->set_flashdata('pesan', 'User tidak ditemukan.');
+            redirect('pelanggan/akun');
+        }
     }
 
-    public function edit($id_pelanggan = NULL)
+    public function edit()
     {
-        $this->form_validation->set_rules('nama_pelanggan', 'Nama Pelanggan', 'required', array(
-            'required' => '%s Harus diisi!!'
-        ));
-        $this->form_validation->set_rules('id_pelanggan', 'Pelanggan', 'required', array(
-            'required' => '%s Harus diisi!!'
-        ));
-        $this->form_validation->set_rules('email', 'Email', 'required', array(
-            'required' => '%s Harus diisi!!'
-        ));
+        // Proteksi halaman (memastikan pelanggan sudah login)
+        $this->pelanggan_login->proteksi_halaman();
 
+        // Ambil data pelanggan dari session
+        $email = $this->session->userdata('email');
 
-        if ($this->form_validation->run() == TRUE) {
-            $config['upload_path'] = './assets/foto/';
-            $config['allowed_types'] = 'gif|jpg|png|jpeg|ico';
-            $config['max_size'] = '2000';
-            $this->upload->initialize($config);
-            $field_name = "foto";
-            if (!$this->upload->do_upload($field_name)) {
-                $data = array(
-                    'title' => 'Edit Menu',
-                    'error_upload' => $this->upload->display_errors(),
-                    'isi' => 'pelanggan/v_akun_saya',
-                );
-                $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
-            } else {
-                //hapus gambar
-                $pelanggan = $this->m_pelanggan->get_data($id_pelanggan);
-                if ($pelanggan->foto != "") {
-                    unlink('./assets/foto/' . $pelanggan->foto);
-                }
-                //end hapus gambar
-
-                $upload_data = array('uploads' => $this->upload->data());
-                $config['image_library'] = 'gd2';
-                $config['source_image'] = './assets/foto/' . $upload_data['uploads']['file_name'];
-                $this->load->library('image_lib', $config);
-                $data = array(
-                    'id_pelanggan' => $id_pelanggan,
-                    'nama_pelanggan' => $this->input->post('nama_pelanggan'),
-
-                    'email' => $this->input->post('email'),
-
-                    'foto' => $upload_data['uploads']['file_name'],
-                );
-                $this->m_pelanggan->edit($data);
-                $this->session->set_flashdata('pesan', 'Data berhasil diganti!!');
-                redirect('pelanggan/akun');
-            }
-            //jika tanpa ganti gambar
-            $data = array(
-                'id_pelanggan' => $id_pelanggan,
-                'nama_pelanggan' => $this->input->post('nama_pelanggan'),
-                'email' => $this->input->post('email'),
-
-            );
-            $this->m_pelanggan->edit($data);
-            $this->session->set_flashdata('pesan', 'Data berhasil diganti!!');
+        // Dapatkan data pelanggan berdasarkan email
+        $pelanggan = $this->m_pelanggan->get_by_email($email);
+        if (!$pelanggan) {
+            $this->session->set_flashdata('error', 'Data pelanggan tidak ditemukan!');
             redirect('pelanggan/akun');
         }
 
+        // Validasi form
+        $this->form_validation->set_rules('nama_pelanggan', 'Nama Pelanggan', 'required', array('required' => '%s Harus diisi!!'));
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email', array('required' => '%s Harus diisi!!', 'valid_email' => 'Format %s tidak valid!!'));
+        $this->form_validation->set_rules('password', 'Password', 'min_length[6]', array('min_length' => '%s minimal 6 karakter.'));
+
+        if ($this->form_validation->run() == TRUE) {
+            // Konfigurasi upload
+            $config['upload_path'] = './img/profile/';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|ico';
+            $config['max_size'] = '2000';
+            $this->upload->initialize($config);
+
+            $data = array(
+                'id_pelanggan' => $pelanggan->id_pelanggan,
+                'nama_pelanggan' => $this->input->post('nama_pelanggan'),
+                'email' => $this->input->post('email'),
+            );
+
+            if (!empty($this->input->post('password'))) {
+                $data['password'] = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
+            }
+
+            // Jika ada upload foto baru
+            if ($this->upload->do_upload('foto')) {
+                // Hapus foto lama jika ada
+                if (!empty($pelanggan->foto)) {
+                    unlink('./img/profile/' . $pelanggan->foto);
+                }
+                $upload_data = $this->upload->data();
+                $data['foto'] = $upload_data['file_name'];
+                $this->session->set_userdata('foto', $data['foto']); // Update session dengan foto baru
+            }
+
+            // Simpan perubahan ke database
+            $this->m_pelanggan->edit($data);
+
+            // Update session dengan data terbaru
+            $this->session->set_userdata('nama_pelanggan', $this->input->post('nama_pelanggan'));
+            $this->session->set_userdata('email', $this->input->post('email'));
+
+            $this->session->set_flashdata('pesan', 'Data berhasil diperbarui!');
+            redirect('pelanggan/akun');
+        }
+
+        // Data untuk ditampilkan di view
         $data = array(
-            'title' => 'Edit Menu',
-            'isi' => 'pelanggan/v_akun_saya',
+            'title' => 'Edit Akun',
+            'pelanggan' => $pelanggan, // Data pelanggan yang akan diedit
+            'isi' => 'pelanggan/v_edit_akun',
         );
         $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
     }
 }
-
-/* End of file Admin.php */
+    
+    /* End of file Admin.php */

@@ -136,7 +136,7 @@
             <!------------------ Keranjang Belanja End ------------------->
 
             <!------------------------ Profile --------------------------->
-            <li class="nav-item" style="margin-left: 10px;">
+            <li class="nav-item" style="margin-left: 5px;">
               <?php if ($this->session->userdata('email') == "") { ?>
                 <a class="nav-menu <?= $this->uri->segment(2) === 'login' ? 'active' : '' ?>" href="<?= base_url('pelanggan/login') ?>" href="<?= base_url('pelanggan/login') ?>">
                   <i class="fa-solid fa-user"></i>

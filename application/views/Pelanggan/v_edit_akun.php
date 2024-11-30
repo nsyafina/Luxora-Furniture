@@ -2,28 +2,20 @@
 <div class="container-fluid mt-2">
     <div class="row">
         <div class="col-lg-9">
-            <?= form_open_multipart('admin/edit'); ?>
+            <?= form_open_multipart('pelanggan/edit'); ?>
             <div class="form-group row">
-                <label for="nama_user" class="col-sm-2 col-form-label">Nama</label>
+                <label for="nama_pelanggan" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nama_user" name="nama_user" value="<?= set_value('nama_user', $user->nama_user); ?>">
-                    <?= form_error('nama_user', '<small class="text-danger pl-3">', '</small>'); ?>
+                    <input type="text" class="form-control" id="nama_pelanggan" name="nama_pelanggan" value="<?= set_value('nama_pelanggan', $pelanggan->nama_pelanggan); ?>">
+                    <?= form_error('nama_pelanggan', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="username" class="col-sm-2 col-form-label">Username</label>
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="username" name="username" value="<?= set_value('username', $user->username); ?>">
-                    <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="no_telp" class="col-sm-2 col-form-label">No Telp</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="no_telp" name="no_telp" value="<?= set_value('no_telp', $user->no_telp); ?>">
-                    <?= form_error('no_telp', '<small class="text-danger pl-3">', '</small>'); ?>
+                    <input type="text" class="form-control" id="email" name="email" value="<?= set_value('email', $pelanggan->email); ?>">
+                    <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
             </div>
 
@@ -43,8 +35,8 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <!-- Foto Lama -->
-                            <img src="<?= base_url('./img/profile/') . $user->foto; ?>" alt="Foto Profil" id="gambar_load"
-                                class="w-20 h-20 object-cover rounded-full border border-gray-300" style="max-width: 190px; max-height: 190px;">
+                            <img src="<?= base_url('./img/profile/') . $pelanggan->foto; ?>" alt="Foto Profil" id="gambar_load"
+                                class="w-30 h-30 object-cover border border-gray-400" style="max-width: 200px; max-height: 200px;">
                         </div>
                         <div class="col-sm-10">
                             <div class="form-group">
@@ -58,7 +50,7 @@
             <div class="form-group row justify-content-end">
                 <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary">Ubah</button>
-                    <button type="button" class="btn btn-dark" onclick="window.location.href='<?= site_url('admin/akun'); ?>'">Kembali</button>
+                    <button type="button" class="btn btn-dark" onclick="window.location.href='<?= site_url('pelanggan/akun'); ?>'">Kembali</button>
                 </div>
             </div>
             </form>

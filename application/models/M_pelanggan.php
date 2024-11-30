@@ -23,6 +23,15 @@ class M_pelanggan extends CI_Model
         $this->db->where('id_pelanggan', $data['id_pelanggan']);
         $this->db->update('pelanggan', $data);
     }
+    public function get_by_email($email)
+    {
+        return $this->db->where('email', $email)->get('pelanggan')->row();
+    }
+
+    public function cekData($where = null)
+    {
+        return $this->db->get_where('pelanggan', $where);
+    }
 }
 
 /* End of file M_pelanggan.php */

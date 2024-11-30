@@ -17,18 +17,14 @@
 </head>
 <style>
     body {
-        background-image: url('../img/background/bg-login2.png');
+        background-image: url('../img/background/3.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: fixed;
     }
 
     .card {
-        background: rgba(255, 255, 255, 0.3);
-        border-top: 4px solid #0b544b;
-        border-bottom: 4px solid #0b544b;
-        box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
-        width: 600px;
+        background: linear-gradient(180deg, rgba(67, 153, 142, 1) 0%, rgba(113, 185, 176, 1) 40%, rgba(67, 153, 142, 1) 75%, rgba(11, 84, 75, 1) 100%);
     }
 
     .logo-login {
@@ -53,79 +49,90 @@
     .btn-login:hover {
         background-position: right;
     }
-
-    #bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        /* Pastikan video berada di belakang konten lainnya */
-    }
 </style>
 
 <body class="hold-transition login-page">
-    <video autoplay muted loop id="bg-video">
-        <source src="../img/background/login.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="login-box" style="margin-right: 200px;">
+    <div class="login-box">
         <!-- /.login-logo -->
-        <div class="card">
+        <div class="card card-outline card-warning">
             <div class="card-header text-center text-white">
                 <a href="http://localhost/luxora-interiors/"><img src="../img/logo/long_logo.png" class="logo-login mb-1"></a>
             </div>
             <di class="card-body text-white mb-3">
 
                 <?php
-                // Display validation errors
-                echo validation_errors('<div style="background: #fa9595; color: #790000; border: 1px solid #790000;" class="alert px-4 py-2 rounded relative text-sm fade-out">', '</div>');
+                echo validation_errors('<div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h5><i class="icon fas fa-exclamation-triangle"></i> Error!</h5>', '</div>');
 
-                // Display session error message
                 if ($this->session->flashdata('error')) {
-                    echo '<div style="background: #fa9595; color: #790000; border: 1px solid #790000;" class="alert px-4 py-2 rounded relative text-sm fade-out">
-                    <span class="block sm:inline">' . $this->session->flashdata('error') . '</span>
-                    </div>';
+                    echo '<div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h5><i class="icon fas fa-times"></i> Error!</h5>';
+                    echo $this->session->flashdata('error');
+                    echo '</div>';
                 }
 
-                // Display success message
                 if ($this->session->flashdata('pesan')) {
-                    echo '<div style="background: #bfd1f5; color: #12389f; border: 1px solid #12389f;" class="alert px-4 py-2 rounded relative text-sm fade-out">
-                    <span class="block sm:inline">' . $this->session->flashdata('pesan') . '</span>
-                    </div>';
+                    echo '<div class="alert alert-success alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <h5><i class="icon fas fa-check"></i> Sukses!</h5>';
+                    echo $this->session->flashdata('pesan');
+                    echo '</div>';
                 }
-                echo form_open('autentifikasi/login_admin')
+
+                echo form_open('autentifikasi/register')
                 ?>
                 <div class="input-group mb-3">
-                    <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="text" name="username" class="form-control" placeholder="Username">
+                    <input type="text" name="nama_user" class="form-control" placeholder="Nama User">
                     <div class="input-group-append">
-                        <div class="input-group-text" style="background: #0b544b; color: white; border: 1px solid rgba(11, 84, 75, 1);">
+                        <div class="input-group-text">
                             <span class="fas fa-user"></span>
                         </div>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="password" name="password" class="form-control" placeholder="Password">
+                    <input type="text" name="username" class="form-control" placeholder="Username">
                     <div class="input-group-append">
-                        <div class="input-group-text" style="background: #0b544b; color: white; border: 1px solid rgba(11, 84, 75, 1);">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="text" name="no_telp" class="form-control" placeholder="No Telp">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
                             <span class="fas fa-lock"></span>
                         </div>
                     </div>
                 </div>
-
+                <div class="input-group mb-3">
+                    <input type="password" name="ulangi_password" class="form-control" placeholder="Retype password">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
                 <!-- /.col -->
                 <div class="col-10" style="margin: auto;">
-                    <button type="submit" class="btn btn-login btn-block">Login</button>
+                    <button type="submit" class="btn btn-login btn-block">Register</button>
                 </div>
                 <!-- /.col -->
                 <?php echo form_close() ?>
 
 
                 <p class="mb-0 mt-3 text-center text-white">
-                    No Account? <a href="register" class="text-center text-white border-bottom">Sign Up</a>
+                    Already have an account? <a href="<?= base_url('autentifikasi/login_admin') ?>" class="text-center text-white border-bottom">Login</a>
                 </p>
         </div>
         <!-- /.card-body -->
@@ -140,20 +147,6 @@
     <script src="<?= base_url() ?>template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="<?= base_url() ?>template/dist/js/adminlte.min.js"></script>
-
-    <script>
-        // Automatically remove alerts after 5 seconds
-        document.addEventListener('DOMContentLoaded', () => {
-            const alerts = document.querySelectorAll('.alert');
-            alerts.forEach(alert => {
-                setTimeout(() => {
-                    alert.classList.add('opacity-0', 'transition', 'ease-out', 'duration-500');
-                    setTimeout(() => alert.remove(), 500); // Remove the alert element from the DOM
-                }, 3000); // 5 seconds delay
-            });
-        });
-    </script>
-
 </body>
 
 </html>

@@ -28,6 +28,11 @@ class M_user extends CI_Model
         $this->db->where('id_user', $data['id_user']);
         $this->db->delete('user', $data);
     }
+
+    public function get_by_username($username)
+    {
+        return $this->db->where('username', $username)->get('user')->row();
+    }
 }
 
 /* End of file M_user.php */

@@ -14,7 +14,7 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
                 <li class="nav-item dropdown no-arrow">
-                    <a class="nav-link <?= (current_url() == site_url('admin/myProfil')) ? 'active' : ''; ?>" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link <?= (current_url() == site_url('admin/akun')) ? 'active' : ''; ?>" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                             <!-- Menggunakan gambar profil dari session -->
                             <img class="img-profile rounded-circle" src="<?= base_url('img/profile/') . $this->session->userdata('foto'); ?>" style="width: 35px; height: 35px;">
@@ -23,7 +23,7 @@
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                        <a class="dropdown-item <?= (current_url() == site_url('admin/myProfil')) ? 'active' : ''; ?>" href="<?= site_url('admin/myProfil'); ?>">
+                        <a class="dropdown-item <?= (current_url() == site_url('admin/akun')) ? 'active' : ''; ?>" href="<?= site_url('admin/akun'); ?>">
                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                             Profile Saya
                         </a>
@@ -34,5 +34,6 @@
                     </div>
                 </li>
             </ul>
+
         </nav>
         <!-- /.navbar -->
