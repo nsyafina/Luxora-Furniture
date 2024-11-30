@@ -71,6 +71,7 @@
   <!-- AdminLTE for demo purposes -->
   <script src="<?= base_url() ?>template/dist/js/demo.js"></script>
   <!-- AdminLTE for demo purposes -->
+
 </head>
 <style>
   @tailwind base;
@@ -90,11 +91,11 @@
   }
 
   .container-fc {
-    padding: 10px 50px 130px;
+    padding: 10px 50px 120px;
   }
 
   .container-about {
-    padding: 10px 50px 40px;
+    padding: 10px 50px 0px;
   }
 
   /*---------- NAVBAR ------------------------*/
@@ -356,6 +357,7 @@
     color: #0b544b;
     font-size: 35px;
     font-weight: bold;
+    font-family: serif;
     margin-left: 6rem;
     margin-top: 33px;
   }
@@ -372,7 +374,7 @@
   }
 
   .about {
-    background-color: rgba(182, 40, 40, 0.1);
+    background-color: #f3d0d0;
   }
 
   .tagline-about {
@@ -405,53 +407,60 @@
     text-align: center;
   }
 
-  .slider-wrapper {
-    overflow: hidden;
-    position: relative;
+  .card-team:hover {
+    background-color: #0b544b;
   }
 
-  .slider {
-    display: flex;
-    transition: transform 0.75s ease;
+  .card-team {
+    background: linear-gradient(180deg, rgba(60, 118, 111, 1) 0%, rgba(147, 175, 163, 1) 66%, rgba(242, 237, 219, 1) 100%);
   }
 
-  .slide {
-    min-width: 100%;
-    flex-shrink: 0;
-    text-align: center;
+  .nama-team {
+    color: white;
   }
 
-  .slide-content img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+  .nim-team {
+    color: white;
   }
 
-  .name {
-    font-weight: bold;
-    margin-top: 8px;
+  .des-team {
+    color: white;
   }
 
-  .slider-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 16px;
+  .icon-team {
+    color: white;
   }
 
-  .slider-controls button {
-    background: none;
-    border: 1px solid #ccc;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-
-  .slider-counter {
-    margin: 0 16px;
+  .container-team {
+    padding: 20px 70px 40px;
   }
 
   /*--------------------- OUR TEAM ------------------------*/
+
+  /*---------- FAQs -------------*/
+  .title-faq {
+    color: #0b544b;
+    font-size: 35px;
+    font-family: serif;
+    font-weight: bold;
+    margin-left: 60px;
+  }
+
+  .title-faq span {
+    color: #c41212;
+  }
+
+  .des-title-faq {
+    margin-left: 61px;
+    font-size: 17px;
+    color: #707e7c;
+  }
+
+  .container-faq {
+    padding: 0 50px 30px;
+  }
+
+  /*---------- FAQs -------------*/
 
   /*--------------------- KATEGORI ------------------------*/
 
