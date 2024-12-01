@@ -196,7 +196,7 @@
                             <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);">Rp. <?= number_format($value->grand_total) ?></td>
                         </tr>
                     </table>
-                    <img class="img-fluid pad" src="<?= base_url('assets/bukti_bayar/' . $value->bukti_bayar) ?>" alt="">
+                    <img class="img-fluid pad" src="<?= base_url('img/bukti_bayar/' . $value->bukti_bayar) ?>" alt="">
                 </div>
 
             </div>

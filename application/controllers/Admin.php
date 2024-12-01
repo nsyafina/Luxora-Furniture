@@ -154,7 +154,7 @@ class Admin extends CI_Controller
 
         if ($this->form_validation->run() == TRUE) {
             // Konfigurasi upload
-            $config['upload_path'] = './img/profile1/';
+            $config['upload_path'] = './img/profile/';
             $config['allowed_types'] = 'gif|jpg|png|jpeg|ico';
             $config['max_size'] = '2000';
             $this->upload->initialize($config);
@@ -174,7 +174,7 @@ class Admin extends CI_Controller
             if ($this->upload->do_upload('foto')) {
                 // Hapus foto lama jika ada
                 if (!empty($user->foto)) {
-                    unlink('./img/profile1/' . $user->foto);
+                    unlink('./img/profile/' . $user->foto);
                 }
                 $upload_data = $this->upload->data();
                 $data['foto'] = $upload_data['file_name'];

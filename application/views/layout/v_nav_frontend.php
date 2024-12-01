@@ -65,15 +65,18 @@
 
             <!----------------------- Testimonial ---------------------->
             <li>
-              <a class="nav-menu " href="#"> Testimonial </a>
+              <a class="nav-menu <?= $this->uri->segment(2) === 'testimonial' ? 'active' : '' ?>"
+                href="<?= base_url('home/#testimonial') ?>">Testimonial</a>
             </li>
             <!----------------------- Testimonial ---------------------->
 
             <!-------------------------- FAQs -------------------------->
             <li>
-              <a class="nav-menu " href="#"> FAQs </a>
+              <a class="nav-menu <?= $this->uri->segment(2) === 'faqs' ? 'active' : '' ?>"
+                href="<?= base_url('home/#faqs') ?>">FAQs</a>
             </li>
             <!-------------------------- FAQs -------------------------->
+
 
             <!------------------- Keranjang Belanja -------------------->
             <?php

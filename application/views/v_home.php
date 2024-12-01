@@ -22,6 +22,7 @@
 </section>
 <!------------ BANNER ------------>
 
+
 <!------ FEATURED CATEGORY ------->
 <h1 class="title-left">Featured <span>Category</span></h1>
 <p class="des-title-left">Temukan koleksi terbaik kami untuk setiap ruangan.</p>
@@ -30,7 +31,7 @@
     <a href="http://localhost/luxora-interiors/home/kategori/1" class="group relative block bg-black">
       <img
         alt=""
-        src="img/home/bed-room.png"
+        src="<?= base_url('img/home/bed-room.png') ?>"
         class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
       <div class="relative p-4 sm:p-6 lg:p-8">
@@ -55,7 +56,7 @@
     <a href="http://localhost/luxora-interiors/home/kategori/2" class="group relative block bg-black">
       <img
         alt=""
-        src="img/home/dining-room.png"
+        src="<?= base_url('img/home/dining-room.png') ?>"
         class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
       <div class="relative p-4 sm:p-6 lg:p-8">
@@ -80,7 +81,7 @@
     <a href="http://localhost/luxora-interiors/home/kategori/3" class="group relative block bg-black">
       <img
         alt=""
-        src="img/home/living-room.png"
+        src="<?= base_url('img/home/living-room.png') ?>"
         class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
       <div class="relative p-4 sm:p-6 lg:p-8">
@@ -101,8 +102,8 @@
     </a>
   </div>
 </div>
-
 <!------ FEATURED CATEGORY ------->
+
 
 <!------------ ABOUT ------------->
 <h1 class="title-about absolute"><span>Luxora</span> Interiors</h1><!-- no responsive -->
@@ -114,7 +115,7 @@
         <div class="relative h-64 sm:h-80 lg:h-full">
           <img
             alt=""
-            src="img/home/about1.jpg"
+            src="<?= base_url() ?>img/home/about1.jpg"
             class="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
@@ -142,10 +143,9 @@
 </section>
 <!------------ ABOUT ------------->
 
+
 <!--------- TESTIMONIAL ---------->
-
 <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
-
 <script type="module">
   import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
 
@@ -209,11 +209,10 @@
   keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
   keenSliderNext.addEventListener('click', () => keenSlider.next())
 </script>
-
-<h1 class="title-team">Testi<span>monial</span></h1>
-<p class="des-title-team">Temukan beberapa penilaian toko ini dari customer kami.</p>
+<h1 class="title-testi" id="testimonial">Testi<span>monial</span></h1>
+<p class="des-title-testi">Temukan beberapa penilaian toko ini dari customer kami.</p>
 <section style="background: transparent;">
-  <div class="mx-auto max-w-screen-xl px-4 py-1 sm:px-6 lg:px-8 lg:py-16">
+  <div class="mx-auto max-w-screen-xl px-4  sm:px-6 lg:px-8">
     <div class="mt-3">
       <div id="keen-slider" class="keen-slider">
         <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
@@ -228,7 +227,7 @@
             <div class=" mt-4 flex items-center gap-4">
               <img
                 alt=""
-                src="img/testi/davin.jpg"
+                src="<?= base_url() ?>img/testi/davin.jpg"
                 class="size-14 rounded-full object-cover" />
 
               <div>
@@ -294,7 +293,7 @@
             <div class=" mt-4 flex items-center gap-4">
               <img
                 alt=""
-                src="img/testi/jelita.jpg"
+                src="<?= base_url() ?>img/testi/jelita.jpg"
                 class="size-14 rounded-full object-cover" />
 
               <div>
@@ -359,7 +358,7 @@
             <div class=" mt-4 flex items-center gap-4">
               <img
                 alt=""
-                src="img/testi/rinjani.jpg"
+                src="<?= base_url() ?>img/testi/rinjani.jpg"
                 class="size-14 rounded-full object-cover" />
 
               <div>
@@ -425,7 +424,7 @@
             <div class=" mt-4 flex items-center gap-4">
               <img
                 alt=""
-                src="img/testi/gio.jpg"
+                src="<?= base_url() ?>img/testi/gio.jpg"
                 class="size-14 rounded-full object-cover" />
 
               <div>
@@ -525,6 +524,51 @@
 </section>
 <!--------- TESTIMONIAL ---------->
 
+
+<!----------- GALLERY ------------>
+<section class="container-galeri text-gray-600 body-font">
+  <div class="container-galeri mx-auto flex flex-wrap">
+    <div class=" flex w-full mb-4 flex-wrap">
+      <h1 class="title-galeri" style="color: #0b544b;">Gallery <span style="color: #c41212;">Luxora Interiors</span></h1>
+      <p class="des-title-galeri">Dari desain modern hingga sentuhan elegan, kami memastikan setiap detail menciptakan harmoni sempurna untuk rumah impian Anda.</p>
+    </div>
+    <div class="flex flex-wrap md:-m-2 -m-1">
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src="<?= base_url() ?>img/galeri/g7.jpg">
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src="<?= base_url() ?>img/galeri/g8.jpg">
+        </div>
+        <div class="md:p-2 p-1 w-full">
+          <video autoplay muted loop class="w-full h-full object-cover object-center block">
+            <source src="<?= base_url() ?>img/galeri/g10.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-full">
+          <video autoplay muted loop class="w-full h-full object-cover object-center block">
+            <source src="<?= base_url() ?>img/galeri/g11.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src="<?= base_url() ?>img/galeri/g5.jpg">
+        </div>
+        <div class="md:p-2 p-1 w-1/2">
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src="<?= base_url() ?>img/galeri/g6.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!----------- GALLERY ------------>
+
+
 <!---------- OUR TEAM ------------>
 <h1 class="title-team">Our <span>Executive Team</span></h1>
 <p class="des-title-team">Team Project Akhir Web Programming 3</p>
@@ -533,7 +577,7 @@
     <div class="grid grid-cols-1 gap-4 mt-1 xl:mt-1 md:grid-cols-2 xl:grid-cols-2">
       <div style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
-          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="img/team/aku2.jpg" alt="">
+          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/aku2.jpg" alt="">
 
           <div class="mt-4 sm:mx-4 sm:mt-0">
             <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Siti Najla Syafina</h1>
@@ -545,7 +589,7 @@
         <p class=" des-team mt-4 capitalize">Desainer web yang penuh ide segar, siap meracik tampilan menarik dan fungsional. Bersemangat untuk membuat desain yang tak hanya enak dilihat, tapi juga mudah digunakan!</p>
 
         <div class="flex mt-4 -mx-2">
-          <a href="#" class="mx-2 icon-team" aria-label="Reddit">
+          <a href="#" class="mx-2 icon-team" aria-label="linkedin">
             <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
               <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
             </svg>
@@ -570,7 +614,7 @@
 
       <div style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
-          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="img/team/silmi.jpg" alt="">
+          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/silmi.jpg" alt="">
 
           <div class="mt-4 sm:mx-4 sm:mt-0">
             <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Silmi Rahmadina</h1>
@@ -582,7 +626,7 @@
         <p class=" des-team mt-4 capitalize">Dengan rasa ingin tahu yang mendalam, saya selalu berusaha untuk menemukan peluang baru untuk berkembang dan memperdalam keahlian dalam bidang yang saya tekuni.</p>
 
         <div class="flex mt-4 -mx-2">
-          <a href="#" class="mx-2 icon-team" aria-label="Reddit">
+          <a href="#" class="mx-2 icon-team" aria-label="linkedin">
             <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
               <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
             </svg>
@@ -607,7 +651,7 @@
 
       <div style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
-          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="img/team/sarah2.jpg" alt="">
+          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/sarah2.jpg" alt="">
 
           <div class="mt-4 sm:mx-4 sm:mt-0">
             <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Sarah Nurhalizah</h1>
@@ -619,7 +663,7 @@
         <p class=" des-team mt-4 capitalize">Memiliki pengalaman dalam pemasaran dan komunikasi, bertugas membangun hubungan yang kuat dengan pelanggan dan memastikan setiap produk ditemukan oleh mereka yang tepat.</p>
 
         <div class="flex mt-4 -mx-2">
-          <a href="#" class="mx-2 icon-team" aria-label="Reddit">
+          <a href="#" class="mx-2 icon-team" aria-label="linkedin">
             <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
               <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
             </svg>
@@ -644,7 +688,7 @@
 
       <div style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
-          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="img/team/ical.jpg" alt="">
+          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/ical.jpg" alt="">
 
           <div class="mt-4 sm:mx-4 sm:mt-0">
             <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Teuku Vaickal Rizki.I</h1>
@@ -656,7 +700,7 @@
         <p class=" des-team mt-4 capitalize">Programmer yang antusias dan terampil dengan dasar yang kuat dalam Ilmu Komputer dan hasrat untuk pengembangan web. Mahir dalam pemecahan masalah dan berkomitmen untuk terus belajar.</p>
 
         <div class="flex mt-4 -mx-2">
-          <a href="#" class="mx-2 icon-team" aria-label="Reddit">
+          <a href="#" class="mx-2 icon-team" aria-label="linkedin">
             <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
               <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
             </svg>
@@ -683,11 +727,12 @@
 </section>
 <!---------- OUR TEAM ------------>
 
+
 <!------------ FAQs -------------->
-<h1 class="title-faq">FA<span>Q</span>s</h1>
+<h1 class="title-faq" id="faqs">Frequently Asked <span>Questions (FAQs)</span></h1>
 <p class="des-title-faq mb-2">Temukan informasi sejelas mungkin tantang kami.</p>
-<div class="space-y-4 container-faq">
-  <details class="group rounded-lg bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden" open>
+<div class="space-y-4 container-faq mb-3">
+  <details class="group rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden" style="background-color: #F2EDDB; border-left: 4px solid #0b544b; border-right: 4px solid #0b544b;" open>
     <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
       <h2 class="font-medium">"Apa yang harus saya lakukan jika produk yang saya terima rusak atau cacat?"</h2>
 
@@ -727,7 +772,7 @@
     </p>
   </details>
 
-  <details class="group rounded-lg bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden">
+  <details class="group rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden" style="background-color: #F2EDDB; border-left: 4px solid #0b544b; border-right: 4px solid #0b544b;">
     <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
       <h2 class="font-medium">"Apakah produk furniture dapat dikustomisasi?"</h2>
 
@@ -765,7 +810,7 @@
     </p>
   </details>
 
-  <details class="group rounded-lg bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden">
+  <details class="group rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden" style="background-color: #F2EDDB; border-left: 4px solid #0b544b; border-right: 4px solid #0b544b;">
     <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
       <h2 class="font-medium">"Berapa lama waktu pengiriman produk?"</h2>
 

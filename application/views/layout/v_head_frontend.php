@@ -274,29 +274,31 @@
 
   @keyframes change {
     0% {
-      background-image: url(img/banner/1.png);
+      background-image: url('<?= base_url('img/banner/1.png') ?>');
     }
 
     20% {
-      background-image: url(img/banner/2.png);
+      background-image: url('<?= base_url('img/banner/2.png') ?>');
     }
 
     40% {
-      background-image: url(img/banner/3.png);
+      background-image: url('<?= base_url('img/banner/3.png') ?>');
     }
 
     60% {
-      background-image: url(img/banner/1.png);
+      background-image: url('<?= base_url('img/banner/1.png') ?>');
     }
 
     80% {
-      background-image: url(img/banner/2.png);
+      background-image: url('<?= base_url('img/banner/2.png') ?>');
     }
 
     100% {
-      background-image: url(img/banner/3.png);
+      background-image: url('<?= base_url('img/banner/3.png') ?>');
     }
   }
+
+
 
   .banner h2 {
     color: white;
@@ -336,8 +338,8 @@
     font-size: 35px;
     font-family: serif;
     font-weight: bold;
-    margin-left: 60px;
-    margin-top: 30px;
+    margin-left: 80px;
+    margin-top: 70px;
   }
 
   .title-left span {
@@ -345,7 +347,7 @@
   }
 
   .des-title-left {
-    margin-left: 61px;
+    margin-left: 81px;
     font-size: 17px;
     color: #707e7c;
   }
@@ -387,12 +389,63 @@
 
   /*---------- ABOUT -------------------------*/
 
+
+  /*---------- GALLERY --------------*/
+  .container-galeri {
+    padding: 25px 35px 30px;
+  }
+
+  .title-galeri {
+    color: #0b544b;
+    font-size: 35px;
+    font-family: serif;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  .title-galeri span {
+    color: #c41212;
+  }
+
+  .des-title-galeri {
+    font-size: 17px;
+    color: #707e7c;
+    margin-left: 30px;
+  }
+
+  /*---------- GALLERY --------------*/
+
+
+  /*-------- TESTIMONIAL ------------*/
   blockquote {
     background-color: #F2EDDB !important;
     border-left: none !important;
     border-top: 4px solid #0b544b;
     border-bottom: 4px solid #0b544b;
+    border-radius: 10px;
   }
+
+  .title-testi {
+    color: #0b544b;
+    font-size: 35px;
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .title-testi span {
+    color: #c41212;
+  }
+
+  .des-title-testi {
+    font-size: 17px;
+    color: #707e7c;
+    text-align: center;
+  }
+
+  /*-------- TESTIMONIAL ------------*/
 
   /*--------------------- OUR TEAM ------------------------*/
   .title-team {
@@ -439,17 +492,7 @@
   }
 
   .container-team {
-    padding: 20px 70px 40px;
-  }
-
-  .carousel {
-    @apply container mx-auto;
-    /* Gaya lainnya untuk container carousel */
-  }
-
-  .carousel-item {
-    @apply relative flex items-center justify-center h-96 bg-gray-200 rounded-lg;
-    /* Gaya lainnya untuk setiap slide */
+    padding: 10px 70px 80px;
   }
 
   /*--------------------- OUR TEAM ------------------------*/
