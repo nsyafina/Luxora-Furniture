@@ -142,13 +142,396 @@
 </section>
 <!------------ ABOUT ------------->
 
-<!------------ OUR TEAM ------------->
+<!--------- TESTIMONIAL ---------->
+
+<link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+
+<script type="module">
+  import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+
+  const keenSliderActive = document.getElementById('keen-slider-active')
+  const keenSliderCount = document.getElementById('keen-slider-count')
+
+  const keenSlider = new KeenSlider(
+    '#keen-slider', {
+      loop: true,
+      defaultAnimation: {
+        duration: 750,
+      },
+      slides: {
+        origin: 'center',
+        perView: 1,
+        spacing: 16,
+      },
+      breakpoints: {
+        '(min-width: 640px)': {
+          slides: {
+            origin: 'center',
+            perView: 1.5,
+            spacing: 16,
+          },
+        },
+        '(min-width: 768px)': {
+          slides: {
+            origin: 'center',
+            perView: 1.75,
+            spacing: 16,
+          },
+        },
+        '(min-width: 1024px)': {
+          slides: {
+            origin: 'center',
+            perView: 3,
+            spacing: 16,
+          },
+        },
+      },
+      created(slider) {
+        slider.slides[slider.track.details.rel].classList.remove('opacity-40')
+
+        keenSliderActive.innerText = slider.track.details.rel + 1
+        keenSliderCount.innerText = slider.slides.length
+      },
+      slideChanged(slider) {
+        slider.slides.forEach((slide) => slide.classList.add('opacity-40'))
+
+        slider.slides[slider.track.details.rel].classList.remove('opacity-40')
+
+        keenSliderActive.innerText = slider.track.details.rel + 1
+      },
+    },
+    []
+  )
+
+  const keenSliderPrevious = document.getElementById('keen-slider-previous')
+  const keenSliderNext = document.getElementById('keen-slider-next')
+
+  keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+  keenSliderNext.addEventListener('click', () => keenSlider.next())
+</script>
+
+<h1 class="title-team">Testi<span>monial</span></h1>
+<p class="des-title-team">Temukan beberapa penilaian toko ini dari customer kami.</p>
+<section style="background: transparent;">
+  <div class="mx-auto max-w-screen-xl px-4 py-1 sm:px-6 lg:px-8 lg:py-16">
+    <div class="mt-3">
+      <div id="keen-slider" class="keen-slider">
+        <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+          <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+            <i class="fa-solid fa-quote-left"></i>
+            <p class="text-gray-700">
+              Saya sangat terkesan dengan kualitas dan desain furniture dari Luxora Interiors.
+              Dining table yang saya beli sangat kokoh dan estetik. Membuat ruang makan terlihat jauh lebih mewah!
+              Pasti akan kembali belanja di sini.
+            </p>
+
+            <div class=" mt-4 flex items-center gap-4">
+              <img
+                alt=""
+                src="img/testi/davin.jpg"
+                class="size-14 rounded-full object-cover" />
+
+              <div>
+                <div class="flex justify-center gap-0.5 text-green-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">Davin Robert</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+          <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+            <i class="fa-solid fa-quote-right"></i>
+            <p class="text-gray-700">
+              Sangat puas dengan pelayanan dari Luxora Interiors.
+              Barang dikemas rapi dan tiba tepat waktu.
+              Meja kerja yang saya beli sesuai dengan foto di website,
+              bahkan lebih bagus secara langsung.
+            </p>
+
+            <div class=" mt-4 flex items-center gap-4">
+              <img
+                alt=""
+                src="img/testi/jelita.jpg"
+                class="size-14 rounded-full object-cover" />
+
+              <div>
+                <div class="flex justify-center gap-0.5 text-green-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">Mawar Jelita</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+          <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+            <i class="fa-solid fa-quote-right"></i>
+            <p class="text-gray-700">
+              Terima kasih, Luxora Interiors! Saya senang sekali belanja di toko ini.
+              Banyak pilihan furniture unik yang tidak saya temukan di toko lain.
+              Sofa baru saya sangat nyaman dan terlihat elegan di ruang tamu.
+            </p>
+
+            <div class=" mt-4 flex items-center gap-4">
+              <img
+                alt=""
+                src="img/testi/rinjani.jpg"
+                class="size-14 rounded-full object-cover" />
+
+              <div>
+                <div class="flex justify-center gap-0.5 text-green-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">Rinjani Alfira</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+          <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+            <i class="fa-solid fa-quote-right"></i>
+            <p class="text-gray-700">
+              Awalnya saya ragu karena harganya terlihat lebih premium,
+              tapi ternyata kualitasnya benar-benar sepadan.
+              Meja makan yang saya beli memberikan nuansa modern pada rumah kami.
+              Terima kasih, Luxora Interiors!
+            </p>
+
+            <div class=" mt-4 flex items-center gap-4">
+              <img
+                alt=""
+                src="img/testi/gio.jpg"
+                class="size-14 rounded-full object-cover" />
+
+              <div>
+                <div class="flex justify-center gap-0.5 text-green-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+
+                <p class="mt-0.5 text-lg font-medium text-gray-900">Giovano Denandra</p>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+
+      </div>
+
+      <div class="mt-6 flex items-center justify-center gap-4">
+        <button
+          aria-label="Previous slide"
+          id="keen-slider-previous"
+          class="text-gray-600 transition-colors hover:text-gray-900">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+
+        <p class="w-16 text-center text-sm text-gray-700">
+          <span id="keen-slider-active"></span>
+          /
+          <span id="keen-slider-count"></span>
+        </p>
+
+        <button
+          aria-label="Next slide"
+          id="keen-slider-next"
+          class="text-gray-600 transition-colors hover:text-gray-900">
+          <svg
+            class="size-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9 5l7 7-7 7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--------- TESTIMONIAL ---------->
+
+<!---------- OUR TEAM ------------>
 <h1 class="title-team">Our <span>Executive Team</span></h1>
 <p class="des-title-team">Team Project Akhir Web Programming 3</p>
 <section style="background: transparent;" class="container-team">
   <div class="mx-auto">
     <div class="grid grid-cols-1 gap-4 mt-1 xl:mt-1 md:grid-cols-2 xl:grid-cols-2">
-      <div style="background: linear-gradient(90deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
+      <div style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
           <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="img/team/aku2.jpg" alt="">
 
@@ -185,7 +568,7 @@
         </div>
       </div>
 
-      <div style="background: linear-gradient(90deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
+      <div style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
           <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="img/team/silmi.jpg" alt="">
 
@@ -222,7 +605,7 @@
         </div>
       </div>
 
-      <div style="background: linear-gradient(90deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
+      <div style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
           <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="img/team/sarah2.jpg" alt="">
 
@@ -259,7 +642,7 @@
         </div>
       </div>
 
-      <div style="background: linear-gradient(90deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
+      <div style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
           <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="img/team/ical.jpg" alt="">
 
@@ -298,7 +681,7 @@
     </div>
   </div>
 </section>
-<!------------ OUR TEAM ------------->
+<!---------- OUR TEAM ------------>
 
 <!------------ FAQs -------------->
 <h1 class="title-faq">FA<span>Q</span>s</h1>

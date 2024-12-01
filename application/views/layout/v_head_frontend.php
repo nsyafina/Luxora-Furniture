@@ -387,6 +387,13 @@
 
   /*---------- ABOUT -------------------------*/
 
+  blockquote {
+    background-color: #F2EDDB !important;
+    border-left: none !important;
+    border-top: 4px solid #0b544b;
+    border-bottom: 4px solid #0b544b;
+  }
+
   /*--------------------- OUR TEAM ------------------------*/
   .title-team {
     color: #0b544b;
@@ -433,6 +440,16 @@
 
   .container-team {
     padding: 20px 70px 40px;
+  }
+
+  .carousel {
+    @apply container mx-auto;
+    /* Gaya lainnya untuk container carousel */
+  }
+
+  .carousel-item {
+    @apply relative flex items-center justify-center h-96 bg-gray-200 rounded-lg;
+    /* Gaya lainnya untuk setiap slide */
   }
 
   /*--------------------- OUR TEAM ------------------------*/
