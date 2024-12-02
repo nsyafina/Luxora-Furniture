@@ -171,6 +171,8 @@ class Pelanggan extends CI_Controller
             // Simpan data foto dan nama pengguna di session
             $this->session->set_userdata('foto', $pelanggan['foto']);
             $this->session->set_userdata('nama_pelanggan', $pelanggan['nama_pelanggan']);
+            $this->session->set_userdata('no_telp', $pelanggan['no_telp']);
+            $this->session->set_userdata('alamat', $pelanggan['alamat']);
 
             // Tambahkan data user ke array
             $data = [

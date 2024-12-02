@@ -522,6 +522,23 @@
 
   /*---------- FAQs -------------*/
 
+  /*-- Profil --*/
+  .btn-edit-profil {
+    background: #0b544b;
+    color: white;
+    padding: 10px 30px;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+
+  .btn-edit-profil:hover {
+    background: #F2EDDB;
+    color: black;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+  }
+
   /*--------------------- KATEGORI ------------------------*/
 
   .title-kategori {
@@ -648,6 +665,13 @@
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4) !important;
   }
 
+  .btn-merah {
+    color: white;
+    background-color: #c41212;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+  }
+
 
   /*--------------------- KATEGORI ------------------------*/
 
@@ -677,7 +701,10 @@
   /*---------- CART --------------------------*/
   .card-cart {
     margin: 2rem;
-    background: linear-gradient(180deg, rgba(11, 84, 75, 1) 0%, rgba(238, 233, 225, 1) 100%);
+    background: linear-gradient(129deg, rgba(242, 237, 219, 1) 0%, rgba(39, 122, 111, 1) 100%);
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
   }
 
   .title-cart {
@@ -730,6 +757,14 @@
 
   .btn-cart-checkout:hover {
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .view-chart:active {
+    background-color: #0b544b;
+  }
+
+  .checkout:active {
+    background-color: #0b544b;
   }
 
   /*---------- CART --------------------------*/

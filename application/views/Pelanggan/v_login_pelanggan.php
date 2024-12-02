@@ -58,6 +58,7 @@
                                     <i class="fas fa-envelope"></i>
                                 </span>
                                 <input
+                                    required
                                     type="email"
                                     id="Email"
                                     name="email"
@@ -73,6 +74,7 @@
                                     <i class="fas fa-lock"></i>
                                 </span>
                                 <input
+                                    required
                                     type="password"
                                     id="Password"
                                     name="password"

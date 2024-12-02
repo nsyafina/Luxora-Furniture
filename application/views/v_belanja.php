@@ -1,8 +1,10 @@
 <div
     href="#"
-    class="card-cart relative block overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8">
-    <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-yellow-300 via-red-500 to-teal-600"></span>
-    <h1 class="title-cart text-center mb-4"><i class="fa-solid fa-basket-shopping"></i> <?= $title ?></h1>
+    class="card-cart relative block overflow-hidden p-4 sm:p-6 lg:p-8">
+    <span class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-yellow-400 to-red-500"></span>
+    <h1 class="font-bold text-teal-800 text-center" style="font-size: 2.8rem; margin: auto;">
+        <span style="color: #c41212;"><i class="fa-solid fa-bag-shopping"></i> Keranjang</span> Belanja
+    </h1>
     <div class="col-sm-12">
         <?php
         if ($this->session->flashdata('pesan')) {
@@ -16,8 +18,9 @@
     </div>
     <?php echo form_open('belanja/update'); ?>
     <table class="w-full border-collapse bg-white rounded-lg shadow-md overflow-hidden mt-6">
-        <thead class="bg-gradient-to-r from-yellow-400 via-red-500 to-purple-600 text-white">
+        <thead class="bg-gradient-to-r bg-gradient-to-r from-yellow-400 to-red-500 text-white">
             <tr>
+                <th class="text-center p-2">Gambar</th>
                 <th class="text-center p-2">Produk</th>
                 <th class="text-center p-2">Berat</th>
                 <th class="text-center p-2">QTY</th>
@@ -36,6 +39,10 @@
                 $total_berat = $total_berat + $berat;
             ?>
                 <tr class="border-t text-center bg-gray-100 hover:bg-gray-200">
+                    <td class="p-2">
+                        <img style="margin: auto;" src="<?= base_url('img/kategori/' . $barang->gambar) ?>" width="150px">
+                    </td>
+
                     <td class="p-2"><?= $items['name']; ?></td>
                     <td class="p-2"><?= $berat ?> Kg</td>
                     <td class="p-2">

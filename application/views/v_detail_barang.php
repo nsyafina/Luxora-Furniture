@@ -1,7 +1,8 @@
 <section class="py-4" style="background: linear-gradient(139deg, rgba(246, 211, 77, 1) 0%, rgba(242, 222, 149, 1) 11%, rgba(238, 233, 225, 1) 32%, rgba(238, 233, 225, 1) 42%, rgba(49, 134, 123, 1) 100%);">
     <div class="container mx-auto px-6">
         <!-- Card Container -->
-        <div class="rounded-lg shadow-lg p-8 overflow-hidden relative" style="background: linear-gradient(180deg, rgba(11, 84, 75, 1) 0%, rgba(238, 233, 225, 1) 100%);">
+        <div class=" p-8 overflow-hidden relative" style="background: linear-gradient(129deg, rgba(242,237,219,1) 0%, rgba(39,122,111,1) 100%); 
+        box-shadow: inset -5px -5px rgba(0, 0, 0, 0.4); border: 1px solid rgba(0, 0, 0, 0.4); border-radius: 15px;">
 
             <!-- Ribbon Eco-friendly -->
             <div class="absolute top-0 left-0 bg-gradient-to-r from-yellow-400 to-red-500 text-white px-5 py-2 rounded-br-lg text-xm font-bold uppercase z-10">
@@ -14,7 +15,7 @@
 
                     <!-- Title and Description -->
                     <div class="relative p-4 rounded-lg mb-4 shadow-lg elevation-5" style="background-color: #0b544b;">
-                        <h1 class="text-4xl font-extrabold text-white leading-tight relative text-center" style="position: relative; padding:30px;">
+                        <h1 class="text-4xl font-extrabold text-black leading-tight relative text-center" style="position: relative; padding:30px;">
                             <span class="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center w-full font-extrabold text-white" style="opacity: 1; font-size: 3rem;">
                                 <?= $barang->nama_barang ?>
                             </span>
@@ -25,10 +26,10 @@
                     <!-- Product Rating -->
                     <div class="flex items-center mb-2">
                         <span class="text-yellow-500" style="font-size: 23px;">★ ★ ★ ★ ☆</span>
-                        <span class="ml-2 text-white">(4.5 / 5) | 250 reviews</span>
+                        <span class="ml-2 text-black">(4.5 / 5) | 250 reviews</span>
                     </div>
 
-                    <p class="text-white leading-relaxed mb-6">
+                    <p class="text-black leading-relaxed mb-6">
                         Temukan beragam pilihan furniture berkualitas tinggi yang dirancang dengan estetika modern dan kenyamanan. Dari meja hingga kursi, semua produk dibuat dengan material premium untuk melengkapi setiap ruang di rumah Anda.
                     </p>
 
@@ -91,7 +92,7 @@
                         echo form_hidden('name', $barang->nama_barang);
                         echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
                         ?>
-                        <button type="submit" class="flex items-center bg-red-600 px-4 py-2 rounded text-white font-bold hover:bg-red-700 transition">
+                        <button type="submit" class="flex items-center px-4 py-2 rounded font-bold transition btn-merah">
                             <i class="fa-solid fa-cart-plus mr-2"></i> Add to Cart
                         </button>
                         <?php echo form_close(); ?>

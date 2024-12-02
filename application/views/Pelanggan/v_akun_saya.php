@@ -1,45 +1,72 @@
 <!-- Begin Page Content -->
-<div class="container-fluid mt-2">
-    <div class="row">
-        <div class="col-lg-6 justify-content-x">
-            <?php if ($this->session->flashdata('pesan')) : ?>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <?= $this->session->flashdata('pesan'); ?>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <img
-                    src="<?= base_url('img/profile/') . $pelanggan->foto; ?>"
-                    alt="Foto Profil"
-                    class="w-full h-full object-cover border-2 border-gray-300"
-                    style="max-width: 190px; max-height: 190px;">
+<div class="container mx-auto mt-5 mb-5 px-4">
+    <!-- Flash Message -->
+    <?php if ($this->session->flashdata('pesan')) : ?>
+        <div class="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-4 rounded-lg shadow-lg mb-6 max-w-3xl mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <i class="fas fa-check-circle text-2xl mr-3"></i>
+                <p><?= $this->session->flashdata('pesan'); ?></p>
             </div>
-            <div class="col-md-8">
-                <div class="card-body" id="profile-details">
-                    <h5 class="card-title">Nama: <?= $pelanggan->nama_pelanggan; ?></h5>
-                    <p class="card-text">Email: <?= $pelanggan->email; ?></p>
+            <button type="button" class="text-white hover:text-gray-200 transition-all" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    <?php endif; ?>
+
+    <!-- Profile Card -->
+    <div class="relative max-w-5xl mx-auto text-white elevation-5 overflow-hidden p-6 md:p-12" style="border-radius: 15px; background: linear-gradient(139deg, rgba(246, 211, 77, 1) 0%, rgba(242, 222, 149, 1) 11%, rgba(238, 233, 225, 1) 32%, rgba(238, 233, 225, 1) 42%, rgba(49, 134, 123, 1) 100%); border: 1px solid rgba(0, 0, 0, 0.4); 
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.4);">
+        <!-- Background Geometric Shapes -->
+
+        <div class="absolute -top-10 right-1/3 w-16 h-16 rounded-lg rotate-45 opacity-100" style="background-color: #ebe6de; box-shadow: inset -5px -5px rgba(0, 0, 0, 0.7);"></div>
+
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 ml-3">
+            <!-- Profile Picture -->
+            <div class="flex flex-col items-center md:items-start">
+                <div class="relative group" style="margin-left: 25px;">
+                    <img
+                        src="<?= base_url('img/profile/') . $pelanggan->foto; ?>"
+                        alt="Foto Profil"
+                        class="rounded-full border-7 elevation-5 border-indigo-500 shadow-lg w-48 h-48 object-cover transform group-hover:scale-105 transition duration-300">
+                    <!-- Badge -->
+                    <span class="absolute bottom-1 right-5 bg-gradient-to-tr from-yellow-800 via-yellow-500 to-yellow-800 text-white text-md font-semibold py-1 px-3 rounded-full shadow-md">
+                        Luxora Member
+                    </span>
                 </div>
-                <div class="btn btn-info ml-3 my-3">
-                    <a href="<?= base_url('pelanggan/edit'); ?>" class="text text-white">
-                        <i class="fas fa-user-edit"></i> Edit Profile
-                    </a>
+                <p class="mt-4 text-lg italic font-medium text-teal-800 text-center md:text-left">
+                    "Your Satisfaction, Our Priority"
+                </p>
+                <a href="<?= base_url('pelanggan/edit'); ?>"
+                    class="btn-edit-profil">
+                    <i class="fas fa-user-edit mr-2"></i>Edit Profil
+                </a>
+            </div>
+
+            <!-- Profile Details -->
+            <div class="col-span-2">
+                <h1 class="text-4xl font-extrabold mb-4 text-teal-800"><i class="fa-solid fa-user"></i> My Profile</h1>
+                <div class="rounded-lg p-6 elevation-5" style="background-color: #F2EDDB; border: 1px solid rgba(11, 84, 75, 0.6);">
+                    <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
+                        <span class="font-bold">Nama :</span> <?= $pelanggan->nama_pelanggan; ?>
+                    </p>
+                    <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
+                        <span class="font-bold">Email :</span> <?= $pelanggan->email; ?>
+                    </p>
+                    <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
+                        <span class="font-bold">Nomor Telpon :</span> <?= $pelanggan->no_telp; ?>
+                    </p>
+                    <p class="text-lg text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
+                        <span class="font-bold">Alamat :</span> <?= $pelanggan->alamat; ?>
+                    </p>
+                </div>
+
+                <!-- Edit Profile Button -->
+                <div class="mt-6 flex gap-4">
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- /.container-fluid -->
-
-<!-- Tambahkan CSS untuk memperbaiki jarak -->
-<style>
-    #profile-details p {
-        margin-bottom: 2px;
-    }
-</style>
+<!-- /.container -->

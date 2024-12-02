@@ -50,7 +50,7 @@
                   x-on:keydown.escape.window="isActive = false">
                   <div class="p-2">
                     <?php foreach ($kategori as $key => $value) { ?>
-                      <a
+                      <a style="color: black;"
                         href="<?= base_url('home/kategori/' . $value->id_kategori) ?>"
                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 <?= ($this->uri->segment(3) == $value->id_kategori) || ($this->uri->segment(2) === 'detail_barang' && $value->id_kategori == $barang->id_kategori) ? 'active' : '' ?>"
                         role="menuitem">
@@ -91,7 +91,7 @@
                 <i class="fas fa-shopping-cart"></i>
                 <span class="badge badge-warning navbar-badge" style="position: absolute;"><?= $jml_item ?></span>
               </a>
-              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="margin-top: 17px;">
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="margin-top: 17px; border-radius: 7px;">
                 <?php if (empty($keranjang)) { ?>
                   <a href="#" class="dropdown-item">
                     <p>Keranjang Belanja Kosong</p>
@@ -131,8 +131,8 @@
                   </a>
                   <!-- barang End -->
                   <div class="dropdown-divider"></div>
-                  <a href="<?= base_url('belanja') ?>" class="dropdown-item dropdown-footer">View Chart</a>
-                  <a href="<?= base_url('belanja/checkout') ?>" class="dropdown-item dropdown-footer">Check Out</a>
+                  <a href="<?= base_url('belanja') ?>" class="view-chart dropdown-item dropdown-footer">View Chart</a>
+                  <a href="<?= base_url('belanja/checkout') ?>" class="checkout dropdown-item dropdown-footer">Check Out</a>
                 <?php } ?>
               </div>
             </li>
