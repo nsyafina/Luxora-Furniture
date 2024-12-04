@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Nov 2024 pada 08.34
+-- Waktu pembuatan: 04 Des 2024 pada 13.52
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -113,15 +113,17 @@ CREATE TABLE `pelanggan` (
   `nama_pelanggan` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` text DEFAULT NULL,
-  `foto` text DEFAULT NULL
+  `foto` text DEFAULT NULL,
+  `alamat` text DEFAULT NULL,
+  `no_telp` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `pelanggan`
 --
 
-INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `email`, `password`, `foto`) VALUES
-(9, 'Siti Najla Syafina', 'najla@gmail.com', '112233', 'foto-profile.jpeg');
+INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `email`, `password`, `foto`, `alamat`, `no_telp`) VALUES
+(10, 'Siti Najla Syafina', 'najla@gmail.com', '$2y$10$UKhKm/k1qxsbx7uJM/H8D.fakotDcljd4GBnTuQO1xl4n7hG4SAfi', 'Cikgu_Melati_-_Upin_Ipin.jpg', 'Jl. Belanak 2 no.25, Blok C22 Rawamangun, Jakarta Timur', '081234567891');
 
 -- --------------------------------------------------------
 
@@ -187,7 +189,18 @@ INSERT INTO `rinci_transaksi` (`no_order`, `id_barang`, `qty`) VALUES
 ('202411261XIEQS0F', 11, 1),
 ('202411267JX6SCDO', 12, 1),
 ('20241127T3RDCJ7F', 37, 1),
-('20241127T3RDCJ7F', 39, 1);
+('20241127T3RDCJ7F', 39, 1),
+('202412014GSCFUR9', 39, 1),
+('20241201UUQJC3VO', 18, 1),
+('20241201UUQJC3VO', 24, 3),
+('20241204HARCKBD8', 24, 1),
+('20241204HARCKBD8', 22, 2),
+('20241204CRZ4U7KE', 11, 1),
+('20241204CRZ4U7KE', 30, 1),
+('20241204CRZ4U7KE', 37, 1),
+('202412042VILXJF9', 24, 1),
+('202412042VILXJF9', 17, 1),
+('202412042VILXJF9', 20, 1);
 
 -- --------------------------------------------------------
 
@@ -248,9 +261,14 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `no_order`, `tgl_order`, `nama_penerima`, `hp_penerima`, `provinsi`, `kota`, `alamat`, `kode_pos`, `expedisi`, `paket`, `estimasi`, `ongkir`, `berat`, `sub_total`, `grand_total`, `status_bayar`, `bukti_bayar`, `atas_nama`, `nama_bank`, `no_rek`, `status_order`, `no_resi`) VALUES
-(18, 9, '202411261XIEQS0F', '2024-11-26', 'Siti Najla Syafina', '085755629887', 'DKI Jakarta', 'Jakarta Barat', 'Cibitung, Bekasi', '17520', 'jne', 'CTC', '1-2 Hari', 10000, 35, 6900000, 6910000, 1, 'bukti_bayar12.jpeg', 'Siti Najla Syafina', 'BSI', '1509-2567-15', 1, NULL),
+(18, 9, '202411261XIEQS0F', '2024-11-26', 'Siti Najla Syafina', '085755629887', 'DKI Jakarta', 'Jakarta Barat', 'Cibitung, Bekasi', '17520', 'jne', 'CTC', '1-2 Hari', 10000, 35, 6900000, 6910000, 1, 'bukti_bayar12.jpeg', 'Siti Najla Syafina', 'BSI', '1509-2567-15', 2, '5799952441'),
 (19, 9, '202411267JX6SCDO', '2024-11-26', 'Siti Najla Syafina', '085755629887', 'Jawa Barat', 'Ciamis', 'Cibitung, Bekasi', '17520', 'jne', 'JTR', '3-4 Hari', 65000, 37, 5900000, 5965000, 1, 'bukti_bayar13.jpeg', 'Siti Najla Syafina', 'BSI', '1509-2567-15', 3, '9591157946'),
-(20, 9, '20241127T3RDCJ7F', '2024-11-27', 'Siti Najla Syafina', '085755629887', 'Jawa Barat', 'Bekasi', 'Cibitung, Bekasi', '17520', 'tiki', 'ECO', '4 Hari', 8000, 4, 1900000, 1908000, 1, 'bukti_bayar14.jpeg', 'Siti Najla Syafina', 'BSI', '1509-2567-15', 0, NULL);
+(20, 9, '20241127T3RDCJ7F', '2024-11-27', 'Siti Najla Syafina', '085755629887', 'Jawa Barat', 'Bekasi', 'Cibitung, Bekasi', '17520', 'tiki', 'ECO', '4 Hari', 8000, 4, 1900000, 1908000, 1, 'bukti_bayar14.jpeg', 'Siti Najla Syafina', 'BSI', '1509-2567-15', 1, NULL),
+(21, 10, '202412014GSCFUR9', '2024-12-01', 'Linda Setiawan', '085755629887', 'DKI Jakarta', 'Jakarta Timur', 'Cibitung, Bekasi', '17520', 'jne', 'CTC', '1-2 Hari', 10000, 2, 500000, 510000, 1, 'bukti_bayar15.jpeg', 'Muhammad Bintang', 'BSI', '1509-2567-15', 3, '6804281246'),
+(22, 10, '20241201UUQJC3VO', '2024-12-01', 'Giovano Denandra', '085755629887', 'DKI Jakarta', 'Jakarta Selatan', 'Cibitung, Bekasi', '17520', 'jne', 'CTC', '1-2 Hari', 10000, 52, 13700000, 13710000, 1, 'bukti_bayar16.jpeg', 'Muhammad Bintang', 'BSI', '1509-2567-15', 3, '8555098830'),
+(23, 10, '20241204HARCKBD8', '2024-12-04', 'Giovano Denandra', '085755629887', 'DKI Jakarta', 'Jakarta Utara', 'Cibitung, Bekasi', '17520', 'jne', 'CTCYES', '1-1 Hari', 18000, 18, 7100000, 7118000, 1, 'bukti_bayar17.jpeg', 'Siti Najla Syafina', 'BSI', '1509-2567-15', 3, '1429296058'),
+(24, 10, '20241204CRZ4U7KE', '2024-12-04', 'Linda Setiawan', '085755629887', 'DKI Jakarta', 'Jakarta Pusat', 'Jakarta, Menteng', '17520', 'tiki', 'FRZ', '0 Hari', 17000, 42, 11450000, 11467000, 1, 'bukti_bayar18.jpeg', 'Nayla Cyntia', 'BSI', '1509-2567-15', 3, '8175349011'),
+(25, 10, '202412042VILXJF9', '2024-12-04', 'Muhammad Bintang', '085755629887', 'DKI Jakarta', 'Jakarta Selatan', 'Jakarta, Menteng', '17520', 'jne', 'CTCYES', '1-1 Hari', 18000, 62, 10800000, 10818000, 0, NULL, NULL, NULL, NULL, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -262,7 +280,7 @@ CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
   `nama_user` varchar(25) DEFAULT NULL,
   `username` varchar(25) DEFAULT NULL,
-  `password` varchar(25) DEFAULT NULL,
+  `password` varchar(256) DEFAULT NULL,
   `alamat` text DEFAULT NULL,
   `no_telp` varchar(50) DEFAULT NULL,
   `level_user` int(1) DEFAULT NULL,
@@ -274,7 +292,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama_user`, `username`, `password`, `alamat`, `no_telp`, `level_user`, `foto`) VALUES
-(9, 'Najla', 'admin1', '112233', 'Jakarta', '081234567892', 1, 'foto-profile.jpeg');
+(14, 'Jelita Safira', 'admin1', '$2y$10$jMFX32y7d9FKxAZZjWp1WeTQl8huJG0lAwcW0O4K.ILvIPj2GDdKW', NULL, '081987654321', 1, 'Ipin_-_Upin_Ipin_dan_Kawan-kawan.jpg');
 
 --
 -- Indexes for dumped tables
@@ -342,7 +360,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `rekening`
@@ -354,13 +372,13 @@ ALTER TABLE `rekening`
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

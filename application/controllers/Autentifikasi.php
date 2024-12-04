@@ -95,7 +95,7 @@ class Autentifikasi extends CI_Controller
                 'nama_user' => $this->input->post('nama_user'),
                 'username' => $this->input->post('username'),
                 'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
-                'foto' => 'default1.jpeg',
+                'foto' => 'default-pict.jpg',
                 'level_user' => 1,
                 'no_telp' => $this->input->post('no_telp'),
 

@@ -248,4 +248,12 @@
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
     color: black;
   }
+
+  .dropdown-profile:active {
+    background-color: #0b544b;
+  }
+
+  .dropdown-logout:active {
+    background-color: #0b544b;
+  }
 </style>

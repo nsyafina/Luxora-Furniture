@@ -22,7 +22,7 @@
                     <img
                         src="<?= base_url('img/profile/') . $user->foto; ?>"
                         alt="Foto Profil"
-                        class="rounded-circle"
+                        class="rounded-circle elevation-5"
                         style="width: 180px; height: 180px; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 4px solid #0b544b;">
                     <!-- Badge -->
                     <div class="badge position-absolute"

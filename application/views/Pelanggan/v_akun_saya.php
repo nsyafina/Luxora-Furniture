@@ -28,7 +28,7 @@
                     <img
                         src="<?= base_url('img/profile/') . $pelanggan->foto; ?>"
                         alt="Foto Profil"
-                        class="rounded-full border-7 elevation-5 border-indigo-500 shadow-lg w-48 h-48 object-cover transform group-hover:scale-105 transition duration-300">
+                        class="rounded-full elevation-5 shadow-lg w-48 h-48 object-cover transform group-hover:scale-105 transition duration-300">
                     <!-- Badge -->
                     <span class="absolute bottom-1 right-5 bg-gradient-to-tr from-yellow-800 via-yellow-500 to-yellow-800 text-white text-md font-semibold py-1 px-3 rounded-full shadow-md">
                         Luxora Member

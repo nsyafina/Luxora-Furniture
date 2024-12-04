@@ -72,7 +72,7 @@
                                     </td>
                                     <td class="px-6 py-2">
                                         <?php if ($value->status_bayar == 0) { ?>
-                                            <a href="<?= base_url('pesanan_saya/bayar/' . $value->id_transaksi) ?>" class="btn-bayar-pesanan font-bold py-2 px-3 rounded"><i class="fas fa-dollar-sign"></i> Payment</a>
+                                            <a href="<?= base_url('pesanan_saya/bayar/' . $value->id_transaksi) ?>" class="btn-bayar-pesanan font-bold py-2 px-3 rounded"><i class="fas fa-dollar-sign"></i> Bayar</a>
                                         <?php } ?>
                                     </td>
                                 </tr>

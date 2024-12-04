@@ -58,7 +58,7 @@ class Pelanggan extends CI_Controller
                 'nama_pelanggan' => $this->input->post('nama_pelanggan'),
                 'email' => $this->input->post('email'),
                 'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
-                'foto' => 'default1.jpeg',
+                'foto' => 'default-pict.jpg',
 
             );
             $this->m_pelanggan->register($data);

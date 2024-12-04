@@ -23,11 +23,11 @@
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                        <a class="dropdown-item <?= (current_url() == site_url('admin/akun')) ? 'active' : ''; ?>" href="<?= site_url('admin/akun'); ?>">
+                        <a class="dropdown-profile dropdown-item <?= (current_url() == site_url('admin/akun')) ? 'active' : ''; ?>" href="<?= site_url('admin/akun'); ?>">
                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                             Profile Saya
                         </a>
-                        <a class="dropdown-item" href="<?= site_url('autentifikasi/logout_admin'); ?>">
+                        <a class="dropdown-logout dropdown-item" href="<?= site_url('autentifikasi/logout_admin'); ?>">
                             <i class="nav-icon fas fa-fw fa-sign-out-alt"></i>
                             Log out
                         </a>
