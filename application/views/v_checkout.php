@@ -1,11 +1,12 @@
 <div class=" container-checkout">
-    <div class="invoice">
+    <div class="invoice" style="border-radius: 15px; background: linear-gradient(129deg, rgba(242, 237, 219, 1) 0%, rgba(39, 122, 111, 1) 100%); 
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.4); border: 1px solid rgba(0, 0, 0, 0.4);">
         <!-- title row -->
         <div class="row">
             <div class="col-12">
-                <h3 style="font-size: 1.5rem; margin-bottom: 20px; font-weight: bold;">
-                    <i class="fas fa-shopping-cart"></i> Luxora Interiors
-                    <small class="float-right" style="font-weight: bold;">Invoice</small>
+                <h3 style="font-size: 2rem; margin-bottom: 20px; font-weight: bold; color: #0b544b;">
+                    <i class="fas fa-shopping-cart" style="color: #0b544b;"></i> Checkout <span style="color: #c41212;">Pesanan</span>
+                    <small class="float-right" style="font-weight: bold; color: #c41212;">Invoice</small>
                 </h3>
             </div>
             <!-- /.col -->
@@ -39,13 +40,13 @@
         <!-- Table row -->
         <div class="row mt-3">
             <div class="col-12 table-responsive">
-                <table class="table table-striped">
-                    <thead>
+                <table class="table-striped w-full border-collapse bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <thead class="bg-gradient-to-r bg-gradient-to-r from-yellow-400 to-red-500 text-white">
                         <tr>
-                            <th class="text-center p-2">Produk</th>
-                            <th class="text-center p-2">Berat</th>
-                            <th class="text-center p-2">Qty</th>
-                            <th class="text-center p-2">Harga</th>
+                            <th class="text-center p-2 ">Produk</th>
+                            <th class="text-center p-2 ">Berat</th>
+                            <th class="text-center p-2 ">Qty</th>
+                            <th class="text-center p-2 ">Harga</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -101,56 +102,56 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label style="font-weight: normal;">Provinsi</label>
-                            <select required name="provinsi" class="form-control"></select>
+                            <select style="border: 2px solid #0b544b;" required name="provinsi" class="form-control"></select>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label style="font-weight: normal;">Kota/Kabupaten</label>
-                            <select required name="kota" class="form-control"></select>
+                            <select style="border: 2px solid #0b544b;" required name="kota" class="form-control"></select>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label style="font-weight: normal;">Expedisi</label>
-                            <select required name="expedisi" class="form-control"></select>
+                            <select style="border: 2px solid #0b544b;" required name="expedisi" class="form-control"></select>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label style="font-weight: normal;">Paket</label>
-                            <select required name="paket" class="form-control"></select>
+                            <select style="border: 2px solid #0b544b;" required name="paket" class="form-control"></select>
                         </div>
                     </div>
 
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label style="font-weight: normal;">Alamat Lengkap</label>
-                            <input required name="alamat" class="form-control" required>
+                            <input style="border: 2px solid #0b544b;" required name="alamat" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label style="font-weight: normal;">Kode Pos</label>
-                            <input required name="kode_pos" class="form-control" required>
+                            <input style="border: 2px solid #0b544b;" required name="kode_pos" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-sm-7">
                         <div class="form-group">
                             <label style="font-weight: normal;">Nama Penerima</label>
-                            <input required name="nama_penerima" class="form-control" required>
+                            <input style="border: 2px solid #0b544b;" required name="nama_penerima" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-sm-5">
                         <div class="form-group">
                             <label style="font-weight: normal;">No. Telp Penerima</label>
-                            <input required name="hp_penerima" class="form-control" required>
+                            <input style="border: 2px solid #0b544b;" required name="hp_penerima" class="form-control" required>
                         </div>
                     </div>
 
@@ -164,19 +165,19 @@
                     <table class="table">
                         <tr>
                             <th style="width:50%">Total Berat : </th>
-                            <td><?= $total_berat ?> Kg</td>
+                            <td style="font-weight: bold;"><?= $total_berat ?> Kg</td>
                         </tr>
                         <tr>
                             <th>Sub Total : </th>
-                            <td>IDR. <?= $this->cart->format_number($this->cart->total()); ?>.-</td>
+                            <td style="font-weight: bold;">IDR. <?= $this->cart->format_number($this->cart->total()); ?>.-</td>
                         </tr>
                         <tr>
                             <th>Ongkir : </th>
-                            <td><label style="font-weight: normal;" id="ongkir"></label>.-</td>
+                            <td><label style="font-weight: bold;" id="ongkir"></label>.-</td>
                         </tr>
-                        <tr>
+                        <tr style="font-size: 1.2rem;">
                             <th>Grand Total : </th>
-                            <td><label id="total_bayar"></label>.-</td>
+                            <td style="font-weight: bold;"><label id="total_bayar"></label>.-</td>
                         </tr>
                     </table>
                 </div>
@@ -208,17 +209,17 @@
                 <p class="lead mt-2">Payment Methods:</p>
                 <!-- Wrapper div with Flexbox classes -->
                 <div class="flex space-x-2 ">
-                    <img src="<?= base_url() ?>img/cart/1.png" class="h-12">
-                    <img src="<?= base_url() ?>img/cart/2.png" class="h-10">
-                    <img src="<?= base_url() ?>img/cart/3.png" class="h-12">
-                    <img src="<?= base_url() ?>img/cart/4.png" class="h-12">
+                    <img src="<?= base_url() ?>img/cart/logo-bank1.png" class="h-12">
+                    <img src="<?= base_url() ?>img/cart/logo-bank2.png" class="h-10">
+                    <img src="<?= base_url() ?>img/cart/logo-bank3.png" class="h-12">
+                    <img src="<?= base_url() ?>img/cart/logo-bank4.png" class="h-12">
                 </div>
             </div>
             <div class="col-6 mt-5">
-                <button type="submit" class="btn btn-primary float-right" style="margin-right: 5px;">
-                    <i class="fas fa-dollar-sign"></i> Payment
+                <button type="submit" class="btn btn-checkout-now float-right" style="margin-right: 5px;">
+                    <i class="fas fa-cart-shopping"></i> Checkout Now
                 </button>
-                <a href="<?= base_url('belanja') ?>" class="btn btn-warning float-right"><i class="fas fa-backward"></i> Back to Cart</a>
+                <a href="<?= base_url('belanja') ?>" class="btn btn-back-cart float-right"><i class="fas fa-backward"></i> Back to Cart</a>
             </div>
         </div>
 

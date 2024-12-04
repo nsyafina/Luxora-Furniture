@@ -145,22 +145,22 @@
                   <i class="fa-solid fa-user"></i>
                 </a>
               <?php } else { ?>
-                <a class="nav-menu" data-toggle="dropdown" href="#">
+                <a class="nav-menu" data-toggle="dropdown" href="#" style="border-radius: 7px;">
                   <span class="d-flex align-items-center">
                     <img src="<?= base_url('img/profile/' . $this->session->userdata('foto')) ?>" alt="AdminLTE Logo" class="nav-profile-img img-circle elevation-3 ml-2" style="opacity: .8">
                   </span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="margin-right: 20px;">
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="margin-right: 20px; border-radius: 7px;">
                   <div class="dropdown-divider"></div>
-                  <a href="<?= base_url('pelanggan/akun') ?>" class="dropdown-item">
-                    <i class="fas fa-user mr-2"></i> Akun Saya
+                  <a href="<?= base_url('pelanggan/akun') ?>" class="dropdown-akun dropdown-item">
+                    <i class="fas fa-user mr-2"></i> My Profile
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="<?= base_url('pesanan_saya') ?>" class="dropdown-item">
+                  <a href="<?= base_url('pesanan_saya') ?>" class="dropdown-pesanan dropdown-item">
                     <i class="fas fa-shopping-cart mr-2"></i> Pesanan Saya
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="<?= base_url('pelanggan/logout') ?>" class="dropdown-item dropdown-footer">Logout</a>
+                  <a href="<?= base_url('pelanggan/logout') ?>" class="dropdown-logout dropdown-item dropdown-footer">Logout</a>
                 </div>
               <?php } ?>
             </li>

@@ -14,11 +14,11 @@
     <?php endif; ?>
 
     <!-- Profile Card -->
-    <div class="relative max-w-5xl mx-auto text-white elevation-5 overflow-hidden p-6 md:p-12" style="border-radius: 15px; background: linear-gradient(139deg, rgba(246, 211, 77, 1) 0%, rgba(242, 222, 149, 1) 11%, rgba(238, 233, 225, 1) 32%, rgba(238, 233, 225, 1) 42%, rgba(49, 134, 123, 1) 100%); border: 1px solid rgba(0, 0, 0, 0.4); 
-    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.4);">
+    <div class="relative max-w-5xl mx-auto text-white overflow-hidden p-6 md:p-12" style="border-radius: 15px; background: linear-gradient(129deg, rgba(242, 237, 219, 1) 0%, rgba(39, 122, 111, 1) 100%); 
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.4); border: 1px solid rgba(0, 0, 0, 0.4);">
         <!-- Background Geometric Shapes -->
 
-        <div class="absolute -top-10 right-1/3 w-16 h-16 rounded-lg rotate-45 opacity-100" style="background-color: #ebe6de; box-shadow: inset -5px -5px rgba(0, 0, 0, 0.7);"></div>
+        <!--<div class="absolute -top-10 right-1/3 w-16 h-16 rounded-lg rotate-45 opacity-100" style="background-color: #ebe6de; box-shadow: inset -5px -5px rgba(0, 0, 0, 0.7);"></div>-->
 
         <!-- Grid Layout -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 ml-3">
@@ -45,19 +45,16 @@
 
             <!-- Profile Details -->
             <div class="col-span-2">
-                <h1 class="text-4xl font-extrabold mb-4 text-teal-800"><i class="fa-solid fa-user"></i> My Profile</h1>
-                <div class="rounded-lg p-6 elevation-5" style="background-color: #F2EDDB; border: 1px solid rgba(11, 84, 75, 0.6);">
+                <h1 class="text-4xl font-extrabold mb-4 title-edit" style="text-align: left !important;"><span><i class="fa-solid fa-user"></i> My</span> Profile</h1>
+                <div class="rounded-lg p-6" style="background-color: #F2EDDB; border: 1px solid rgba(11, 84, 75, 0.6);">
                     <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
                         <span class="font-bold">Nama :</span> <?= $pelanggan->nama_pelanggan; ?>
                     </p>
                     <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
                         <span class="font-bold">Email :</span> <?= $pelanggan->email; ?>
                     </p>
-                    <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
+                    <p class="text-lg text-teal-800" style="padding-bottom:5px; ">
                         <span class="font-bold">Nomor Telpon :</span> <?= $pelanggan->no_telp; ?>
-                    </p>
-                    <p class="text-lg text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
-                        <span class="font-bold">Alamat :</span> <?= $pelanggan->alamat; ?>
                     </p>
                 </div>
 

@@ -534,9 +534,66 @@
   }
 
   .btn-edit-profil:hover {
-    background: #F2EDDB;
+    background: #f9cd26;
     color: black;
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-ubah-profil {
+    background-color: #0b544b;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: white;
+  }
+
+  .btn-ubah-profil:hover {
+    background-color: #0b544b;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: white;
+  }
+
+  .btn-batal {
+    background-color: #f9cd26;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: black;
+  }
+
+  .btn-batal:hover {
+    background-color: #f9cd26;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: black;
+  }
+
+  .card-edit-akun {
+    margin: auto;
+    padding: 40px 60px;
+    background: linear-gradient(129deg, rgba(242, 237, 219, 1) 0%, rgba(39, 122, 111, 1) 100%);
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+  }
+
+  .title-edit {
+    color: #0b544b;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .title-edit span {
+    color: #c41212;
+  }
+
+  .dropdown-akun:active {
+    background-color: #0b544b;
+  }
+
+  .dropdown-pesanan:active {
+    background-color: #0b544b;
+  }
+
+  .dropdown-logout:active {
+    background-color: #0b544b;
   }
 
   /*--------------------- KATEGORI ------------------------*/
@@ -672,6 +729,33 @@
     border-radius: 5px;
   }
 
+  .btn-submit-bayar {
+    background-color: #12389f;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+    color: white;
+  }
+
+  .btn-submit-bayar:hover {
+    background-color: #12389f;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+    color: white;
+  }
+
+  .btn-close-bayar {
+    background-color: #f9cd26;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+    color: black;
+  }
+
+  .btn-close-bayar:hover {
+    background-color: #f9cd26;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+    color: black;
+  }
 
   /*--------------------- KATEGORI ------------------------*/
 
@@ -767,6 +851,7 @@
     background-color: #0b544b;
   }
 
+
   /*---------- CART --------------------------*/
 
   /*--------------------- CHECKOUT ------------------------*/
@@ -782,11 +867,134 @@
     border-radius: 20px;
   }
 
+  .btn-checkout-now {
+    background-color: #12389f;
+    color: white;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+  .btn-checkout-now:hover {
+    background-color: #12389f;
+    color: white;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+  .btn-back-cart {
+    background-color: #f9cd26;
+    color: black;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    margin-right: 10px;
+    border: none;
+  }
+
+  .btn-back-cart:hover {
+    background-color: #f9cd26;
+    color: black;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    margin-right: 10px;
+    border: none;
+  }
+
   /*--------------------- CHECKOUT ------------------------*/
 
   /*------------------- PESANAN SAYA ----------------------*/
   .container-pesanan {
     margin: 30px;
+  }
+
+  .tabs-order:focus,
+  .tabs-order:active,
+  .active-tab {
+    border-top: 3px solid #0b544b !important;
+    border-radius: 15px 10px 0 0;
+    border-bottom: none;
+    background-color: #F2EDDB;
+    margin-top: 2px;
+  }
+
+  .tabs-proses:focus,
+  .tabs-proses:active,
+  .active-tab {
+    border-top: 3px solid #0b544b !important;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    background-color: #F2EDDB;
+    margin-top: 2px;
+  }
+
+  .tabs-kirim:focus,
+  .tabs-kirim:active,
+  .active-tab {
+    border-top: 3px solid #0b544b !important;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    background-color: #F2EDDB;
+    margin-top: 2px;
+  }
+
+  .tabs-selesai:focus,
+  .tabs-selesai:active,
+  .active-tab {
+    border-top: 3px solid #0b544b !important;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    background-color: #F2EDDB;
+    margin-top: 2px;
+  }
+
+  .btn-bayar-pesanan {
+    background-color: #12389f;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+  }
+
+  .container-bayar {
+    padding: 30px 50px 20px;
+  }
+
+  .btn-diterima {
+    background-color: #f9cd26;
+    color: black;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+  .btn-diterima:hover {
+    background-color: #f9cd26;
+    color: black;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+  .btn-belum {
+    background-color: #f9cd26;
+    color: black;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+  .btn-belum:hover {
+    background-color: #f9cd26;
+    color: black;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+  .btn-sudah {
+    background-color: #0b544b;
+    color: white;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+  }
+
+  .btn-sudah:hover {
+    background-color: #0b544b;
+    color: white;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    border: none;
   }
 
   /*------------------- PESANAN SAYA ----------------------*/
