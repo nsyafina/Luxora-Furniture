@@ -79,7 +79,7 @@
                             </div>
                         </div>
 
-                        <div class="col-span-6">
+                        <div class="col-span-6 sm:col-span-3">
                             <label class="block font-medium text-teal-700" style="font-size: 1rem;">Email</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-3 flex items-center text-teal-800">
@@ -91,6 +91,22 @@
                                     name="email"
                                     value="<?= set_value('email') ?>"
                                     placeholder="Masukkan email anda"
+                                    class="w-full pl-10 rounded-lg border-2 border-teal-700 bg-white py-2 text-teal-700 shadow-sm focus:border-red-500 focus:ring-1 focus:ring-teal-800" />
+                            </div>
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-3">
+                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">No. Telp</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-3 flex items-center text-teal-800">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <input
+                                    type="text"
+                                    id="no_telp"
+                                    name="no_telp"
+                                    value="<?= set_value('no_telp') ?>"
+                                    placeholder="Masukkan nomor anda"
                                     class="w-full pl-10 rounded-lg border-2 border-teal-700 bg-white py-2 text-teal-700 shadow-sm focus:border-red-500 focus:ring-1 focus:ring-teal-800" />
                             </div>
                         </div>
