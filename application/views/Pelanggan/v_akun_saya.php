@@ -46,11 +46,11 @@
             <!-- Profile Details -->
             <div class="col-span-2">
                 <h1 class="text-4xl font-extrabold mb-4 title-edit" style="text-align: left !important;"><span><i class="fa-solid fa-user"></i> My</span> Profile</h1>
-                <div class="rounded-lg p-6" style="background-color: #F2EDDB; border: 1px solid rgba(11, 84, 75, 0.6);">
-                    <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
+                <div class="rounded-lg p-6" style="background-color: #f6f0e7 ; border: 1px solid rgba(11, 84, 75, 0.6);">
+                    <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px;  border-bottom: 1px solid #c7b198">
                         <span class="font-bold">Nama :</span> <?= $pelanggan->nama_pelanggan; ?>
                     </p>
-                    <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px; border-bottom: 1px solid black;">
+                    <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px;  border-bottom: 1px solid #c7b198">
                         <span class="font-bold">Email :</span> <?= $pelanggan->email; ?>
                     </p>
                     <p class="text-lg text-teal-800" style="padding-bottom:5px; ">

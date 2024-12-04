@@ -210,4 +210,42 @@
     background-color: #0b544b;
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
   }
+
+  .btn-edit-profile {
+    background: #0b544b;
+    color: white;
+    padding: 10px 30px;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+
+  .btn-edit-profile:hover {
+    background: #f9cd26;
+    color: black;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-ubah-profile {
+    background-color: #0b544b;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: white;
+  }
+
+  .btn-ubah-profile:hover {
+    background-color: #0b544b;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: white;
+  }
+
+  .btn-batal-profile {
+    background-color: #f9cd26;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: black;
+  }
+
+  .btn-batal-profile:hover {
+    background-color: #f9cd26;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: black;
+  }
 </style>

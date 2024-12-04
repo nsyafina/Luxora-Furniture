@@ -76,7 +76,7 @@ class Admin extends CI_Controller
     public function pesanan_masuk()
     {
         $data = array(
-            'title' => 'Pesanan',
+            'title' => '<i class="nav-icon fas fa-dollar-sign"></i> Transaksi Pesanan',
             'pesanan' => $this->m_pesanan_masuk->pesanan(),
             'pesanan_diproses' => $this->m_pesanan_masuk->pesanan_diproses(),
             'pesanan_dikirim' => $this->m_pesanan_masuk->pesanan_dikirim(),
