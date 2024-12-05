@@ -147,7 +147,7 @@
               <?php } else { ?>
                 <a class="nav-menu" data-toggle="dropdown" href="#" style="border-radius: 7px;">
                   <span class="d-flex align-items-center">
-                    <img src="<?= base_url('img/profile/' . $this->session->userdata('foto')) ?>" alt="AdminLTE Logo" class="nav-profile-img img-circle elevation-3 ml-2" style="opacity: .8">
+                    <img src="<?= base_url('img/profile/' . $this->session->userdata('foto_frontend')) ?>" alt="AdminLTE Logo" class="nav-profile-img img-circle elevation-3 ml-2" style="opacity: .8">
                   </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="margin-right: 20px; border-radius: 7px;">

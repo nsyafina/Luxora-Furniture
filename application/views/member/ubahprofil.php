@@ -38,7 +38,7 @@
             <!-- Gambar -->
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
-                    <img src="<?= base_url('./img/profile/') . $user->foto; ?>" alt="Foto Profil" id="gambar_load" class="rounded"
+                    <img src="<?= base_url('./img/profile-admin/') . $user->foto; ?>" alt="Foto Profil" id="gambar_load" class="rounded"
                         style="width: 200px; height: 200px; object-fit: cover;">
                 </div>
                 <div class="col-md-8">

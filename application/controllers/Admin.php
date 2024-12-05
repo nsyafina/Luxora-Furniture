@@ -115,7 +115,7 @@ class Admin extends CI_Controller
         // Cek apakah data ditemukan
         if ($user) {
             // Simpan data foto dan nama pengguna di session
-            $this->session->set_userdata('foto', $user['foto']);
+            $this->session->set_userdata('foto_backend', $user['foto']);
             $this->session->set_userdata('nama_user', $user['nama_user']);
 
             // Tambahkan data user ke array
@@ -135,7 +135,6 @@ class Admin extends CI_Controller
 
     public function edit()
     {
-
         // Ambil data user dari session
         $username = $this->session->userdata('username');
 
@@ -148,8 +147,8 @@ class Admin extends CI_Controller
 
         // Validasi form
         $this->form_validation->set_rules('nama_user', 'Nama user', 'required', array('required' => '%s Harus diisi!!'));
-        $this->form_validation->set_rules('username', 'username', 'required', array('required' => '%s Harus diisi!!'));
-        $this->form_validation->set_rules('no_telp', 'no_telp', 'required', array('required' => '%s Harus diisi!!'));
+        $this->form_validation->set_rules('username', 'Username', 'required', array('required' => '%s Harus diisi!!'));
+        $this->form_validation->set_rules('no_telp', 'No Telepon', 'required', array('required' => '%s Harus diisi!!'));
         $this->form_validation->set_rules('password', 'Password', 'min_length[6]', array('min_length' => '%s minimal 6 karakter.'));
 
         if ($this->form_validation->run() == TRUE) {
@@ -159,6 +158,7 @@ class Admin extends CI_Controller
             $config['max_size'] = '2000';
             $this->upload->initialize($config);
 
+            // Data yang akan diupdate
             $data = array(
                 'id_user' => $user->id_user,
                 'nama_user' => $this->input->post('nama_user'),
@@ -166,19 +166,26 @@ class Admin extends CI_Controller
                 'no_telp' => $this->input->post('no_telp'),
             );
 
+            // Periksa apakah password diisi
             if (!empty($this->input->post('password'))) {
                 $data['password'] = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
             }
 
-            // Jika ada upload foto baru
+            // Jika ada file foto yang diunggah
             if ($this->upload->do_upload('foto')) {
-                // Hapus foto lama jika ada
-                if (!empty($user->foto)) {
+                // Hapus foto lama jika ada, kecuali foto default
+                if (!empty($user->foto) && $user->foto != 'default-pict.jpg') {
                     unlink('./img/profile-admin/' . $user->foto);
                 }
                 $upload_data = $this->upload->data();
                 $data['foto'] = $upload_data['file_name'];
-                $this->session->set_userdata('foto', $data['foto']); // Update session dengan foto baru
+
+                // Update session khusus backend
+                $this->session->set_userdata('foto_backend', $data['foto']); // Update session dengan foto baru
+            } else {
+                // Jika tidak ada foto baru, gunakan foto lama
+                $data['foto'] = $user->foto;
+                $this->session->set_userdata('foto_backend', $user->foto); // Pastikan session tetap sinkron
             }
 
             // Simpan perubahan ke database

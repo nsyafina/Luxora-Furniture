@@ -24,8 +24,8 @@
 
 
 <!------ FEATURED CATEGORY ------->
-<h1 class="title-left">Featured <span>Category</span></h1>
-<p class="des-title-left">Temukan koleksi terbaik kami untuk setiap ruangan.</p>
+<h1 class="title-fc">Featured <span>Category</span></h1>
+<p class="des-title-fc">Temukan koleksi terbaik kami untuk setiap ruangan.</p>
 <div class=" container-fc grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-3" style="margin-bottom: 15rem;">
   <div class="h-32 rounded-lg bg-gray-200">
     <a href="http://localhost/luxora-interiors/home/kategori/1" class="group relative block bg-black">

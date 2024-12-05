@@ -17,7 +17,7 @@
                     <a class="nav-link <?= (current_url() == site_url('admin/akun')) ? 'active' : ''; ?>" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                             <!-- Menggunakan gambar profil dari session -->
-                            <img class="img-profile rounded-circle" src="<?= base_url('img/profile/') . $this->session->userdata('foto'); ?>" style="width: 35px; height: 35px;">
+                            <img class="img-profile rounded-circle" src="<?= base_url('img/profile-admin/') . $this->session->userdata('foto_backend'); ?>" style="width: 35px; height: 35px;">
                             <?= $this->session->userdata('nama_user'); ?>
                         </span>
                     </a>

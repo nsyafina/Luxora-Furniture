@@ -32,7 +32,7 @@ class Autentifikasi extends CI_Controller
                     'id_user' => $user->id_user,
                     'nama_user' => $user->nama_user,
                     'username' => $user->username,
-                    'foto' => $user->foto
+                    'foto_backend' => $user->foto
                 ));
                 redirect('admin');
             } else {

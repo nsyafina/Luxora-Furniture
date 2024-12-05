@@ -20,7 +20,7 @@
             <div class="col-md-4 text-center">
                 <div class="position-relative">
                     <img
-                        src="<?= base_url('img/profile/') . $user->foto; ?>"
+                        src="<?= base_url('img/profile-admin/') . $user->foto; ?>"
                         alt="Foto Profil"
                         class="rounded-circle elevation-5"
                         style="width: 180px; height: 180px; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 4px solid #0b544b;">

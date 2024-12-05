@@ -333,20 +333,20 @@
   /*---------- BANNER ------------------------*/
 
   /*---------- TITLE -------------------------*/
-  .title-left {
+  .title-fc {
     color: #0b544b;
     font-size: 35px;
     font-family: serif;
     font-weight: bold;
     margin-left: 80px;
-    margin-top: 70px;
+    margin-top: 50px;
   }
 
-  .title-left span {
+  .title-fc span {
     color: #c41212;
   }
 
-  .des-title-left {
+  .des-title-fc {
     margin-left: 81px;
     font-size: 17px;
     color: #707e7c;

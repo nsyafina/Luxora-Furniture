@@ -12,6 +12,16 @@ class M_pesanan_masuk extends CI_Model
         return $this->db->get()->result();
     }
 
+    /*public function pesanan() {
+        $this->db->select('transaksi.*, rinci_transaksi.id_barang, rinci_transaksi.qty');
+        $this->db->from('transaksi');
+        $this->db->join('rinci_transaksi', 'transaksi.no_order = rinci_transaksi.no_order');
+        $this->db->where('transaksi.status_order=0');
+        $this->db->order_by('transaksi.id_transaksi', 'desc');
+        return $this->db->get()->result();
+    }*/
+    // Lakukan modifikasi serupa untuk fungsi pesanan_diproses, pesanan_dikirim, dan pesanan_selesai
+
     public function pesanan_diproses()
     {
         $this->db->select('*');

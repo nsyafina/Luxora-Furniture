@@ -59,6 +59,7 @@ class Pelanggan extends CI_Controller
                 'email' => $this->input->post('email'),
                 'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
                 'foto' => 'default-pict.jpg',
+                'no_telp' => $this->input->post('no_telp'),
 
             );
             $this->m_pelanggan->register($data);
@@ -138,7 +139,7 @@ class Pelanggan extends CI_Controller
                     'id_pelanggan' => $pelanggan->id_pelanggan,
                     'nama_pelanggan' => $pelanggan->nama_pelanggan,
                     'email' => $pelanggan->email,
-                    'foto' => $pelanggan->foto
+                    'foto_frontend' => $pelanggan->foto
                 ));
                 redirect('pelanggan/akun');
             } else {
@@ -169,10 +170,9 @@ class Pelanggan extends CI_Controller
         // Cek apakah data ditemukan
         if ($pelanggan) {
             // Simpan data foto dan nama pengguna di session
-            $this->session->set_userdata('foto', $pelanggan['foto']);
+            $this->session->set_userdata('foto_frontend', $pelanggan['foto']);
             $this->session->set_userdata('nama_pelanggan', $pelanggan['nama_pelanggan']);
             $this->session->set_userdata('no_telp', $pelanggan['no_telp']);
-            $this->session->set_userdata('alamat', $pelanggan['alamat']);
 
             // Tambahkan data user ke array
             $data = [
@@ -227,13 +227,17 @@ class Pelanggan extends CI_Controller
 
             // Jika ada upload foto baru
             if ($this->upload->do_upload('foto')) {
-                // Hapus foto lama jika ada
-                if (!empty($pelanggan->foto)) {
+                // Hapus foto lama jika bukan default
+                if (!empty($pelanggan->foto) && $pelanggan->foto !== 'default-pict.jpg') {
                     unlink('./img/profile/' . $pelanggan->foto);
                 }
                 $upload_data = $this->upload->data();
                 $data['foto'] = $upload_data['file_name'];
-                $this->session->set_userdata('foto', $data['foto']); // Update session dengan foto baru
+                $this->session->set_userdata('foto_frontend', $data['foto']); // Update session dengan foto baru
+            } else {
+                // Jika tidak ada upload foto, gunakan foto lama
+                $data['foto'] = $pelanggan->foto;
+                $this->session->set_userdata('foto_frontend', $data['foto']); // Update session dengan foto baru
             }
 
             // Simpan perubahan ke database
