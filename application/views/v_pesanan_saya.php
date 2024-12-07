@@ -20,7 +20,7 @@
             <div class="flex justify-start" id="tabs" style="border-bottom: 1px solid rgba(0, 0, 0, 0.4); border-top: 1px solid rgba(0, 0, 0, 0.4); border-radius:15px 15px 0 0;
             box-shadow: inset -5px 0px rgba(0, 0, 0, 0.2);">
                 <button class="tabs-order py-2 px-4 text-sm font-bold text-gray-700 border-b-2 border-transparent hover:border-gray-300 focus:outline-none active-tab" data-tab="tab1">
-                    Order
+                    Pesanan Baru
                 </button>
                 <button class="tabs-proses py-2 px-4 text-sm font-bold text-gray-700 border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab="tab2">
                     Diproses

@@ -41,7 +41,7 @@
                 </div>
 
                 <div
-                  class="absolute end-0 z-10 mt-2 w-36 rounded-md border border-gray-100 bg-white shadow-lg"
+                  class="absolute end-0 z-10 mt-2 w-42 rounded-md border border-gray-100 bg-white shadow-lg"
                   role="menu"
                   x-cloak
                   x-transition
@@ -141,7 +141,7 @@
             <!------------------------ Profile --------------------------->
             <li class="nav-item" style="margin-left: 5px;">
               <?php if ($this->session->userdata('email') == "") { ?>
-                <a class="nav-menu <?= $this->uri->segment(2) === 'login' ? 'active' : '' ?>" href="<?= base_url('pelanggan/login') ?>" href="<?= base_url('pelanggan/login') ?>">
+                <a class="nav-menu <?= $this->uri->segment(2) === 'login' ? 'active' : ($this->uri->segment(2) === 'register' ? 'active' : '') ?>" href="<?= base_url('pelanggan/login') ?>">
                   <i class="fa-solid fa-user"></i>
                 </a>
               <?php } else { ?>

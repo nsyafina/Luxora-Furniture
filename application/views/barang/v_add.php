@@ -1,9 +1,6 @@
 <div class="col-md-12 mt-3">
     <!-- general form elements disabled -->
     <div class="card" style="border-top: 4px solid #0b544b; border-bottom: 4px solid #0b544b; border-radius: 10px;">
-        <div class="card-header">
-            <h3 class="card-title" style="color: #0b544b;">Form Tambah Barang</h3>
-        </div>
         <!-- /.card-header -->
         <div class="card-body">
             <?php

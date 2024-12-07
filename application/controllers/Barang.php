@@ -78,7 +78,7 @@ class Barang extends CI_Controller
             $field_name = "gambar";
             if (!$this->upload->do_upload($field_name)) {
                 $data = array(
-                    'title' => 'Add Barang',
+                    'title' => '<i class="fas fa-plus"></i> Tambah Produk',
                     'kategori' => $this->m_kategori->get_all_data(),
                     'error_upload' => $this->upload->display_errors(),
                     'isi' => 'barang/v_add',
@@ -106,7 +106,7 @@ class Barang extends CI_Controller
         }
 
         $data = array(
-            'title' => '<i class="fas fa-plus"></i> Tambah Barang',
+            'title' => '<i class="fas fa-plus"></i> Tambah Produk',
             'kategori' => $this->m_kategori->get_all_data(),
             'isi' => 'barang/v_add',
         );
