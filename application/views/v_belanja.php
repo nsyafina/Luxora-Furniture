@@ -6,15 +6,12 @@
         <span style="color: #c41212;"><i class="fa-solid fa-bag-shopping"></i> Keranjang</span> Belanja
     </h1>
     <div class="col-sm-12">
-        <?php
-        if ($this->session->flashdata('pesan')) {
-            echo '<div class="alert alert-success alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <h5><i class="icon fas fa-check"></i>';
-            echo $this->session->flashdata('pesan');
-            echo '</h5></div>';
-        }
-        ?>
+        <?php if ($this->session->flashdata('pesan')) { ?>
+            <div id="cart-alert" class="mt-5 fixed top-12 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg shadow-lg z-50">
+                <strong class="font-bold"><i class="fas fa-check-circle"></i></strong>
+                <span class="block sm:inline"><?= $this->session->flashdata('pesan') ?></span>
+            </div>
+        <?php } ?>
     </div>
     <?php echo form_open('belanja/update'); ?>
     <table class="w-full border-collapse bg-white rounded-lg shadow-md overflow-hidden mt-6">
@@ -71,3 +68,18 @@
     </div>
     <?php echo form_close(); ?>
 </div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const alertElement = document.getElementById('cart-alert');
+        if (alertElement) {
+            setTimeout(() => {
+                alertElement.style.transition = 'opacity 0.5s ease';
+                alertElement.style.opacity = '0';
+                setTimeout(() => {
+                    alertElement.style.display = 'none';
+                }, 100);
+            }, 2000);
+        }
+    });
+</script>

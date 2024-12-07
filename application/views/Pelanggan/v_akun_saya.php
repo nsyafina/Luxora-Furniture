@@ -1,17 +1,12 @@
 <!-- Begin Page Content -->
 <div class="container mx-auto mt-5 mb-5 px-4">
     <!-- Flash Message -->
-    <?php if ($this->session->flashdata('pesan')) : ?>
-        <div class="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-4 rounded-lg shadow-lg mb-6 max-w-3xl mx-auto flex items-center justify-between">
-            <div class="flex items-center">
-                <i class="fas fa-check-circle text-2xl mr-3"></i>
-                <p><?= $this->session->flashdata('pesan'); ?></p>
-            </div>
-            <button type="button" class="text-white hover:text-gray-200 transition-all" aria-label="Close">
-                <i class="fas fa-times"></i>
-            </button>
+    <?php if ($this->session->flashdata('pesan')) { ?>
+        <div id="cart-alert" class="mt-5 fixed top-12 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg shadow-lg z-50" id="cartAlert">
+            <strong class="font-bold"><i class="fas fa-check-circle"></i></strong>
+            <span class="block sm:inline"><?= $this->session->flashdata('pesan') ?></span>
         </div>
-    <?php endif; ?>
+    <?php } ?>
 
     <!-- Profile Card -->
     <div class="relative max-w-5xl mx-auto text-white overflow-hidden p-6 md:p-12" style="border-radius: 15px; background: linear-gradient(129deg, rgba(242, 237, 219, 1) 0%, rgba(39, 122, 111, 1) 100%); 
@@ -67,3 +62,15 @@
     </div>
 </div>
 <!-- /.container -->
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const alertElement = document.getElementById('cart-alert');
+        if (alertElement) {
+            setTimeout(() => {
+                alertElement.classList.add('opacity-0');
+                setTimeout(() => alertElement.classList.add('hidden'), 500);
+            }, 3000);
+        }
+    });
+</script>

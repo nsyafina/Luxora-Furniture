@@ -72,6 +72,10 @@
   <script src="<?= base_url() ?>template/dist/js/demo.js"></script>
   <!-- AdminLTE for demo purposes -->
 
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- AOS -->
+
 </head>
 <style>
   @tailwind base;

@@ -106,7 +106,7 @@
     <!-- Alert Box for Add to Cart -->
     <?php if ($this->session->flashdata('pesan')): ?>
         <div id="cart-alert" class="mt-5 fixed top-12 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg shadow-lg z-50" role="alert">
-            <strong class="font-bold"><i class="fas fa-check-circle"></i> Berhasil!</strong>
+            <strong class="font-bold"><i class="fas fa-check-circle"></i></strong>
             <span class="block sm:inline"><?= $this->session->flashdata('pesan') ?></span>
             <span class="absolute top-0 bottom-0 right-0 px-4 py-3" onclick="this.parentElement.style.display='none'">
             </span>

@@ -1,16 +1,14 @@
 <div class="main-container-kategori">
     <!-- Banner vertikal -->
-    <div class="banner-vertical-kategori"></div>
-
-    <!-- Tempatkan coding produk yang sudah ada di sini -->
+    <div data-aos="fade-right" data-aos-duration="1000" class="banner-vertical-kategori"></div>
     <div>
         <!----------------- Title Kategori ------------------>
-        <h1 class="title-kategori"><span><?= $title ?></span> Category</h1>
-        <p class="des-title-kategori">Temukan koleksi terbaik kami untuk setiap ruangan.</p>
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="title-kategori"><span><?= $title ?></span> Category</h1>
+        <p data-aos="fade-up" data-aos-duration="1000" class="des-title-kategori">Temukan koleksi terbaik kami untuk setiap ruangan.</p>
         <!----------------- Title Kategori ------------------>
 
         <!---------------- Produk Kategori ------------------>
-        <div class="mt-2 container-3 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+        <div data-aos="fade-up" data-aos-duration="1000" class="mt-2 container-3 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
             <?php foreach ($barang as $key => $value) { ?>
                 <div class="bg-grid">
                     <?php
@@ -53,21 +51,19 @@
     </div>
 </div>
 
-<!-- Tambahkan elemen alert -->
+
 <?php if ($this->session->flashdata('pesan')) { ?>
-    <div class="mt-5 alert fixed top-12 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg shadow-lg transition-opacity duration-500 opacity-100" id="cartAlert">
-        <strong class="font-bold"><i class="icon fas fa-check"></i> Sukses!</strong>
-        <span class="block sm:inline"><?= $this->session->flashdata('pesan'); ?></span>
+    <div id="cart-alert" class="mt-5 fixed top-12 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg shadow-lg z-50" id="cartAlert">
+        <strong class="font-bold"><i class="fas fa-check-circle"></i></strong>
+        <span class="block sm:inline"><?= $this->session->flashdata('pesan') ?></span>
     </div>
 <?php } ?>
 
-<!-- Tambahkan script di bagian bawah -->
+
 <script>
-    // Fungsi untuk menyembunyikan alert setelah 3 detik
     window.addEventListener('DOMContentLoaded', (event) => {
         const alertElement = document.getElementById('cartAlert');
         if (alertElement) {
-            // Hilangkan alert setelah 3 detik
             setTimeout(() => {
                 alertElement.classList.add('opacity-0');
                 setTimeout(() => alertElement.classList.add('hidden'), 500);
