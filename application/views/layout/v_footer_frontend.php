@@ -21,7 +21,7 @@
                 <ul class="mt-8 flex gap-6">
                     <li>
                         <a
-                            href="#"
+                            href="https://www.facebook.com/ubsi.kaliabang?locale=id_ID"
                             rel="noreferrer"
                             target="_blank"
                             class="text-gray-700 transition hover:opacity-75">
@@ -38,7 +38,7 @@
 
                     <li>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/bsi_kaliabang?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                             rel="noreferrer"
                             target="_blank"
                             class="text-gray-700 transition hover:opacity-75">
@@ -55,15 +55,13 @@
 
                     <li>
                         <a
-                            href="#"
+                            href="https://www.tiktok.com/@ubsi_official"
                             rel="noreferrer"
                             target="_blank"
                             class="text-gray-700 transition hover:opacity-75">
-                            <span class="sr-only">Twitter</span>
-
-                            <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            <span class="sr-only">Tiktok</span>
+                            <svg class="size-6" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
                             </svg>
                         </a>
                     </li>
@@ -87,7 +85,7 @@
 
                     <li>
                         <a
-                            href="#"
+                            href="https://wa.me/6285811886269?text=Halo,%20Admin%20Luxora%20Furniture!%20Saya%20tertarik%20dengan%20produk%20yang%20ada%20di%20website%20Anda.%20Apakah%20saya%20bisa%20mendapatkan%20informasi%20lebih%20lanjut%20tentang:%0A- Nama Produk:%20[Masukkan%20nama%20produk%20di%20sini]%0A- Kode Produk:%20[Masukkan%20kode%20produk%20di%20sini]%0A%0ATerima%20kasih!%20Saya%20tunggu%20responnya.%20😊"
                             rel="noreferrer"
                             target="_blank"
                             class="text-gray-700 transition hover:opacity-75">
@@ -111,19 +109,19 @@
 
                     <ul class="mt-6 space-y-4 text-md">
                         <li>
-                            <a href="#" class="text-gray-300 transition hover:opacity-75"> Bathroom </a>
+                            <a href="http://localhost/luxora-interiors/home/kategori/4" class="text-gray-300 transition hover:opacity-75"> Bathroom </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-gray-300 transition hover:opacity-75"> Bedroom </a>
+                            <a href="http://localhost/luxora-interiors/home/kategori/3" class="text-gray-300 transition hover:opacity-75"> Bedroom </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-gray-300 transition hover:opacity-75"> Dining Room </a>
+                            <a href="http://localhost/luxora-interiors/home/kategori/2" class="text-gray-300 transition hover:opacity-75"> Dining Room </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-gray-300 transition hover:opacity-75"> Living Room </a>
+                            <a href="http://localhost/luxora-interiors/home/kategori/1" class="text-gray-300 transition hover:opacity-75"> Living Room </a>
                         </li>
                     </ul>
                 </div>

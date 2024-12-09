@@ -204,13 +204,16 @@
     <li>
       <span class="fab-label">Whatsapp</span>
       <div class="fab-icon-holder">
-        <a href="https://wa.me/6285811886269?text=Halo,%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20cucian%20yang%20Anda%20tawarkan.%20Bisakah%20Anda%20memberikan%20informasi%20terkait harga,%20jenis%20layanan,%20dan%20waktu%20pengerjaan?%20Terimakasih."><i class="fa-brands fa-whatsapp" style="font-size: 25px; margin-top: 13px;"></i></a>
+        <a href="https://wa.me/6285811886269?text=Halo,%20Admin%20Luxora%20Furniture!%20Saya%20tertarik%20dengan%20produk%20yang%20ada%20di%20website%20Anda.%20Apakah%20saya%20bisa%20mendapatkan%20informasi%20lebih%20lanjut%20tentang:%0A- Nama Produk:%20[Masukkan%20nama%20produk%20di%20sini]%0A- Kode Produk:%20[Masukkan%20kode%20produk%20di%20sini]%0A%0ATerima%20kasih!%20Saya%20tunggu%20responnya.%20😊">
+          <i class="fa-brands fa-whatsapp" style="font-size: 25px; margin-top: 13px;"></i>
+        </a>
+
       </div>
     </li>
     <li>
       <span class="fab-label">Instagram</span>
       <div class="fab-icon-holder">
-        <a href="https://www.instagram.com/laundry_bubblewash?igsh=MnRwZTZncmNlNW5o"><i class="fa-brands fa-instagram" style="font-size: 25px; margin-top: 13px;"></i></a>
+        <a href="https://www.instagram.com/bsi_kaliabang?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram" style="font-size: 25px; margin-top: 13px;"></i></a>
       </div>
     </li>
     <li>
@@ -228,7 +231,7 @@
     <li>
       <span class="fab-label">Telegram</span>
       <div class="fab-icon-holder">
-        <a href="https://t.me/+P-eOfvujcbU0MjQ1"><i class="fa-brands fa-telegram" style="margin-top: 10px;"></i></a>
+        <a href="https://t.me/+CEXm7fLFoR03ZWE1"><i class="fa-brands fa-telegram" style="margin-top: 10px;"></i></a>
       </div>
     </li>
   </ul>
