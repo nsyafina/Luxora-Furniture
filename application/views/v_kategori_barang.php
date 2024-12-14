@@ -62,7 +62,7 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        const alertElement = document.getElementById('cartAlert');
+        const alertElement = document.getElementById('cart-alert');
         if (alertElement) {
             setTimeout(() => {
                 alertElement.classList.add('opacity-0');

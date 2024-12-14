@@ -128,14 +128,14 @@
 
   .btn-cek-bukti {
     color: white;
-    background-color: #0b544b;
+    background-color: #790000;
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
     margin-bottom: 5px;
   }
 
   .btn-cek-bukti:hover {
     color: white;
-    background-color: #0b544b;
+    background-color: #790000;
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
   }
 
@@ -160,6 +160,18 @@
   .btn-kirim:hover {
     color: white;
     background-color: #12389f;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn-detail-pesanan {
+    color: white;
+    background-color: #0b544b;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn-detail-pesanan:hover {
+    color: white;
+    background-color: #0b544b;
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
   }
 

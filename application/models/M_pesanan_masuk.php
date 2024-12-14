@@ -20,7 +20,6 @@ class M_pesanan_masuk extends CI_Model
         $this->db->order_by('transaksi.id_transaksi', 'desc');
         return $this->db->get()->result();
     }*/
-    // Lakukan modifikasi serupa untuk fungsi pesanan_diproses, pesanan_dikirim, dan pesanan_selesai
 
     public function pesanan_diproses()
     {

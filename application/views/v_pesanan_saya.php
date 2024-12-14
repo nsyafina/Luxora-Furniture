@@ -35,7 +35,7 @@
 
             <!-- Tabs Content -->
             <div class="p-4">
-                <!-- Tab Order -->
+                <!-- Tab Pesanan Baru -->
                 <div id="tab1" class="tab-content">
                     <table class="w-full border-collapse bg-white rounded-lg shadow-md overflow-hidden">
                         <thead class="bg-gradient-to-r bg-gradient-to-r from-yellow-400 to-red-500 text-white">
@@ -52,7 +52,51 @@
                         <tbody>
                             <?php foreach ($belum_bayar as $key => $value) { ?>
                                 <tr>
-                                    <td class="border px-6 py-2"><?= $value->no_order ?></td>
+                                    <td class="border px-6 py-2"><?= $value->no_order ?><br>
+                                        <button class="btn btn-detail-pesanan mt-2 btn-sm" data-toggle="modal" data-target="#detailModal<?= $value->id_transaksi ?>">
+                                            <i class="fas fa-info-circle"></i> Detail Pesanan
+                                        </button>
+                                        <!-- Modal Detail Pesanan -->
+                                        <div class="modal fade" id="detailModal<?= $value->id_transaksi ?>" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="detailModalLabel"><strong>Detail Pesanan <?= $value->no_order ?></strong></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <table class="table table-bordered">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">ID Barang</th>
+                                                                    <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">Qty</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <?php
+                                                                $this->db->select('*');
+                                                                $this->db->from('rinci_transaksi');
+                                                                $this->db->where('no_order', $value->no_order);
+                                                                $detail = $this->db->get()->result();
+                                                                foreach ($detail as $d) { ?>
+                                                                    <tr>
+                                                                        <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $d->id_barang ?></td>
+                                                                        <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $d->qty ?></td>
+                                                                    </tr>
+                                                                <?php } ?>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-close-modal" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Modal Detail Pesanan -->
+                                    </td>
                                     <td class="border px-6 py-2"><?= $value->tgl_order ?></td>
                                     <td class="border px-6 py-2"><?= $value->nama_penerima ?></td>
                                     <td class="border px-6 py-2"><?= $value->alamat ?></td>
@@ -70,17 +114,44 @@
                                             <span class="bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded">Menunggu Verifikasi</span>
                                         <?php } ?>
                                     </td>
-                                    <td class="px-6 py-2">
+                                    <td class="px-4 py-4">
                                         <?php if ($value->status_bayar == 0) { ?>
-                                            <a href="<?= base_url('pesanan_saya/bayar/' . $value->id_transaksi) ?>" class="btn-bayar-pesanan font-bold py-2 px-3 rounded"><i class="fas fa-dollar-sign"></i> Bayar</a>
+                                            <a href="<?= base_url('pesanan_saya/bayar/' . $value->id_transaksi) ?>" class="btn-bayar-pesanan font-bold py-2 px-3 rounded">
+                                                <i class="fas fa-dollar-sign mr-1"></i> Bayar
+                                            </a><br>
+                                            <button type="button" class="btn-batalkan-pesanan font-bold py-2 px-3 rounded mt-2"
+                                                data-toggle="modal" data-target="#cancelModal<?= $value->id_transaksi ?>">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
                                         <?php } ?>
                                     </td>
+                                    <!-- Modal Validasi Batal -->
+                                    <div class="modal fade" id="cancelModal<?= $value->id_transaksi ?>" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header" style="color: #790000;">
+                                                    <h5 class="modal-title" id="cancelModalLabel"><strong>Konfirmasi Pembatalan</strong></h5>
+                                                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body" style="color: #790000;">
+                                                    Anda yakin ingin membatalkan pesanan ini? Tindakan ini tidak dapat dikembalikan.
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Tetap Memesan</button>
+                                                    <a href="<?= base_url('pesanan_saya/batalkan_pesanan/' . $value->id_transaksi) ?>" class="btn btn-batalkan-pesanan">Batalkan Pesanan</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal Validasi Batal -->
                                 </tr>
                             <?php } ?>
                         </tbody>
                     </table>
                 </div>
-                <!-- Tab Order -->
+                <!-- Tab Pesanan Baru -->
 
                 <!-- Tab Diproses -->
                 <div id="tab2" class="tab-content hidden">
@@ -142,7 +213,7 @@
                                         <span class="badge badge-success">Dikirim</span>
                                     </td>
                                     <td class="px-3 py-2">
-                                        <button class="btn btn-diterima" data-toggle="modal" data-target="#diterima<?= $value->id_transaksi ?>">Diterima</button>
+                                        <button class="btn font-bold btn-diterima" data-toggle="modal" data-target="#diterima<?= $value->id_transaksi ?>">Diterima</button>
                                     </td>
 
                                 </tr>

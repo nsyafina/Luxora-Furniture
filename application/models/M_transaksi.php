@@ -13,6 +13,12 @@ class M_transaksi extends CI_Model
         $this->db->insert('rinci_transaksi', $data_rinci);
     }
 
+    public function delete_pesanan($id_transaksi)
+    {
+        $this->db->where('id_transaksi', $id_transaksi);
+        $this->db->delete('transaksi');
+    }
+
     public function belum_bayar()
     {
         $this->db->select('*');

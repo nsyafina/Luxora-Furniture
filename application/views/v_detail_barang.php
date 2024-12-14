@@ -56,6 +56,10 @@
                     <!-- Product Details Card -->
                     <div class="bg-gray-100 rounded-lg shadow-inner p-4 mb-6">
                         <div class="flex justify-between py-2 border-b border-gray-300">
+                            <span class="text-teal-800 font-medium">ID Produk</span>
+                            <span class="text-gray-800"><?= $barang->id_barang ?></span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-300">
                             <span class="text-teal-800 font-medium">Berat</span>
                             <span class="text-gray-800"><?= $barang->berat ?> Kg</span>
                         </div>

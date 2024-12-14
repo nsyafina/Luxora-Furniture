@@ -30,8 +30,8 @@
 
                 <li class="nav-header" style="font-size: 12px; font-weight: bold;">MASTER DATA</li>
 
-                <li class="nav-item <?php if (in_array($this->uri->segment(1), ['kategori', 'barang', 'user'])) echo 'menu-open'; ?>">
-                    <a href="#" class="nav-link <?php if (in_array($this->uri->segment(1), ['kategori', 'barang', 'user'])) echo 'active'; ?>">
+                <li class="nav-item <?php if (in_array($this->uri->segment(1), ['kategori', 'barang', 'pelanggan'])) echo 'menu-open'; ?>">
+                    <a href="#" class="nav-link <?php if (in_array($this->uri->segment(1), ['kategori', 'barang', 'pelanggan'])) echo 'active'; ?>">
                         <i class="nav-icon fas fa-th-large"></i>
                         <p>
                             Daftar data

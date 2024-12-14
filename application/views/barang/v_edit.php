@@ -17,7 +17,7 @@
             echo form_open_multipart('barang/edit/' . $barang->id_barang) ?>
 
             <div class="form-group">
-                <label style="color: #0b544b;">Nama Barang</label>
+                <label style="color: #0b544b;">Nama Produk</label>
                 <input style="border: 2px solid #0b544b;" name="nama_barang" class="form-control" placeholder="Nama Barang ..." value="<?= $barang->nama_barang ?>">
             </div>
             <div class="row">

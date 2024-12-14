@@ -36,20 +36,60 @@
                             <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">Nama Penerima</th>
                             <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">Alamat Penerima</th>
                             <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">No. Telp</th>
-                            <!--<th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">Id Produk</th>
-                            <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">QTY</th>-->
                             <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">Grand Total</th>
                             <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);"></th>
                         </tr>
                         <?php foreach ($pesanan as $key => $value) { ?>
                             <tr>
-                                <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->no_order ?></td>
+                                <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->no_order ?><br>
+                                    <button class="btn btn-detail-pesanan mt-2 btn-sm" data-toggle="modal" data-target="#detailModal<?= $value->id_transaksi ?>">
+                                        <i class="fas fa-info-circle"></i> Detail Pesanan
+                                    </button>
+                                    <!-- Modal Detail Pesanan -->
+                                    <div class="modal fade" id="detailModal<?= $value->id_transaksi ?>" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="detailModalLabel"><strong>Detail Pesanan <?= $value->no_order ?></strong></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">ID Barang</th>
+                                                                <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">Qty</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php
+                                                            $this->db->select('*');
+                                                            $this->db->from('rinci_transaksi');
+                                                            $this->db->where('no_order', $value->no_order);
+                                                            $detail = $this->db->get()->result();
+                                                            foreach ($detail as $d) { ?>
+                                                                <tr>
+                                                                    <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $d->id_barang ?></td>
+                                                                    <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $d->qty ?></td>
+                                                                </tr>
+                                                            <?php } ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal Detail Pesanan -->
+                                </td>
                                 <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->tgl_order ?></td>
                                 <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->nama_penerima ?></td>
                                 <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->alamat ?></td>
                                 <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->hp_penerima ?></td>
-                                <!--<td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->id_barang ?></td>
-                                <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->qty ?></td>-->
                                 <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);">
                                     <b>Rp. <?= number_format($value->grand_total) ?></b><br>
                                     <?php if ($value->status_bayar == 0) { ?>
@@ -66,6 +106,7 @@
                                     <?php } ?>
                                 </td>
                             </tr>
+
                         <?php } ?>
                     </table>
                 </div><!-- /.data pesanan masuk -->
@@ -84,7 +125,51 @@
                         </tr>
                         <?php foreach ($pesanan_diproses as $key => $value) { ?>
                             <tr>
-                                <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->no_order ?></td>
+                                <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->no_order ?><br>
+                                    <button class="btn btn-detail-pesanan mt-2 btn-sm" data-toggle="modal" data-target="#detailModal<?= $value->id_transaksi ?>">
+                                        <i class="fas fa-info-circle"></i> Detail Pesanan
+                                    </button>
+                                    <!-- Modal Detail Pesanan -->
+                                    <div class="modal fade" id="detailModal<?= $value->id_transaksi ?>" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="detailModalLabel"><strong>Detail Pesanan <?= $value->no_order ?></strong></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">ID Barang</th>
+                                                                <th style="border: 1px solid rgba(11, 84, 75, 1); color: white; background-color: rgba(11, 84, 75, 1);">Qty</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php
+                                                            $this->db->select('*');
+                                                            $this->db->from('rinci_transaksi');
+                                                            $this->db->where('no_order', $value->no_order);
+                                                            $detail = $this->db->get()->result();
+                                                            foreach ($detail as $d) { ?>
+                                                                <tr>
+                                                                    <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $d->id_barang ?></td>
+                                                                    <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $d->qty ?></td>
+                                                                </tr>
+                                                            <?php } ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal Detail Pesanan -->
+                                </td>
                                 <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->tgl_order ?></td>
                                 <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->nama_penerima ?></td>
                                 <td style="border: 1px solid rgba(11, 84, 75, 0.5); color: #0b544b; background-color: rgba(11, 84, 75, 0.3);"><?= $value->alamat ?></td>

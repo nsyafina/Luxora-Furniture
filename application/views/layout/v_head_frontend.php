@@ -955,6 +955,46 @@
     border: none;
   }
 
+  .btn-batalkan-pesanan {
+    background-color: #790000;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+  }
+
+  .btn-batalkan-pesanan:hover {
+    background-color: #790000;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+  }
+
+  .btn-close-modal {
+    background-color: #f9cd26;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: black;
+    border: none;
+  }
+
+  .btn-close-modal:hover {
+    background-color: #f9cd26;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+    color: black;
+    border: none;
+  }
+
+  .btn-detail-pesanan {
+    color: white;
+    background-color: #0b544b;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn-detail-pesanan:hover {
+    color: white;
+    background-color: #0b544b;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.4);
+  }
+
   .container-bayar {
     padding: 30px 50px 20px;
   }

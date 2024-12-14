@@ -23,6 +23,15 @@ class Pesanan_saya extends CI_Controller
         $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
     }
 
+    public function batalkan_pesanan($id_transaksi)
+    {
+        $this->m_transaksi->delete_pesanan($id_transaksi);
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success">Pesanan berhasil dibatalkan.</div>');
+        redirect('pesanan_saya');
+    }
+
+
     public function bayar($id_transaksi)
     {
         $this->form_validation->set_rules('atas_nama', 'Atas Nama', 'required', array(

@@ -164,20 +164,20 @@
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
-                            <th style="width:50%">Total Berat : </th>
-                            <td style="font-weight: bold;"><?= $total_berat ?> Kg</td>
+                            <th style="width:50%; color: #F2EDDB;">Total Berat : </th>
+                            <td style="font-weight: bold; color: #F2EDDB;"><?= $total_berat ?> Kg</td>
                         </tr>
                         <tr>
-                            <th>Sub Total : </th>
-                            <td style="font-weight: bold;">IDR. <?= $this->cart->format_number($this->cart->total()); ?>.-</td>
+                            <th style="color: #F2EDDB;">Sub Total : </th>
+                            <td style="font-weight: bold; color: #F2EDDB;">IDR. <?= $this->cart->format_number($this->cart->total()); ?>.-</td>
                         </tr>
                         <tr>
-                            <th>Ongkir : </th>
-                            <td><label style="font-weight: bold;" id="ongkir"></label>.-</td>
+                            <th style="color: #F2EDDB;">Ongkir : </th>
+                            <td style="color: #F2EDDB;"><label style="font-weight: bold; color: #F2EDDB;" id="ongkir"></label>.-</td>
                         </tr>
-                        <tr style="font-size: 1.2rem;">
-                            <th>Grand Total : </th>
-                            <td style="font-weight: bold;"><label id="total_bayar"></label>.-</td>
+                        <tr style="font-size: 1.3rem;">
+                            <th style="color: #F2EDDB;">Grand Total : </th>
+                            <td style="font-weight: bold; color: #F2EDDB;"><label style="border-bottom: 1px solid #F2EDDB;" id="total_bayar"></label>.-</td>
                         </tr>
                     </table>
                 </div>
@@ -220,6 +220,7 @@
                     <i class="fas fa-cart-shopping"></i> Checkout Now
                 </button>
                 <a href="<?= base_url('belanja') ?>" class="btn btn-back-cart float-right"><i class="fas fa-backward"></i> Back to Cart</a>
+                <!--<button class="btn btn-kirim" onclick="printSelectedData()"><i class="fas fa-print"></i> Print</button>-->
             </div>
         </div>
 
@@ -338,4 +339,77 @@
             });
         }
     });
+
+    /*function print
+    function printSelectedData() {
+        const printArea = document.createElement("div");
+        printArea.style.padding = "20px";
+        printArea.style.fontFamily = "Arial, sans-serif";
+
+        // Ambil elemen yang relevan untuk dicetak
+        const table = document.querySelector(".table-responsive").cloneNode(true);
+        const info = `
+        <div>
+            <p><strong>Alamat Lengkap:</strong> ${document.querySelector("input[name='alamat']").value}</p>
+            <p><strong>Nama Penerima:</strong> ${document.querySelector("input[name='nama_penerima']").value}</p>
+            <p><strong>No. Telp Penerima:</strong> ${document.querySelector("input[name='hp_penerima']").value}</p>
+        </div>
+    `;
+        const totals = `
+        <table style="margin-top: 20px; border-collapse: collapse; width: 100%;">
+            <tr>
+                <th style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px;">Total Berat:</th>
+                <td style="text-align: right; padding: 8px;">${document.querySelector("td[style='font-weight: bold;']").innerText}</td>
+            </tr>
+            <tr>
+                <th style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px;">Sub Total:</th>
+                <td style="text-align: right; padding: 8px;">IDR ${parseInt(<?= $this->cart->total() ?>).toLocaleString('en-US')}.-</td>
+            </tr>
+            <tr>
+                <th style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px;">Ongkir:</th>
+                <td style="text-align: right; padding: 8px;">IDR ${document.querySelector("#ongkir").innerText.split("IDR. ")[1]}</td>
+            </tr>
+            <tr>
+                <th style="text-align: left; border-bottom: 1px solid #ddd; padding: 8px; font-size: 1.2rem;">Grand Total:</th>
+                <td style="text-align: right; padding: 8px; font-weight: bold; font-size: 1.2rem;">IDR ${document.querySelector("#total_bayar").innerText.split("IDR. ")[1]}</td>
+            </tr>
+        </table>
+    `;
+
+        // Tambahkan konten ke div sementara
+        printArea.innerHTML = `<h2 style="text-align: center; margin-bottom: 20px;">Ringkasan Pesanan</h2>`;
+        printArea.appendChild(table);
+        printArea.innerHTML += info;
+        printArea.innerHTML += totals;
+
+        // Buka jendela baru untuk mencetak
+        const printWindow = window.open("", "_blank");
+        printWindow.document.write(`
+        <html>
+            <head>
+                <title>Cetak Invoice</title>
+                <style>
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 20px;
+                    }
+                    table, th, td {
+                        border: 1px solid #ddd;
+                    }
+                    th, td {
+                        text-align: center;
+                        padding: 8px;
+                    }
+                </style>
+            </head>
+            <body>
+                ${printArea.outerHTML}
+            </body>
+        </html>
+    `);
+        printWindow.document.close();
+        printWindow.print();
+    }
+    */
 </script>
