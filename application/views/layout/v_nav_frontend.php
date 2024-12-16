@@ -204,7 +204,7 @@
     <li>
       <span class="fab-label">Whatsapp</span>
       <div class="fab-icon-holder">
-        <a href="https://wa.me/6285811886269?text=Halo,%20Admin%20Luxora%20Furniture!%20Saya%20tertarik%20dengan%20produk%20yang%20ada%20di%20website%20Anda.%20Apakah%20saya%20bisa%20mendapatkan%20informasi%20lebih%20lanjut%20tentang:%0A- Nama Produk:%20[Masukkan%20nama%20produk%20di%20sini]%0A- Kode Produk:%20[Masukkan%20kode%20produk%20di%20sini]%0A%0ATerima%20kasih!%20Saya%20tunggu%20responnya.%20😊">
+        <a href="https://wa.me/6282195708304?text=Halo,%20Admin%20Luxora%20Interiors!%20Saya%20tertarik%20dengan%20produk%20yang%20ada%20di%20website%20Anda.%20Apakah%20saya%20bisa%20mendapatkan%20informasi%20lebih%20lanjut%20tentang:%0A%0A- Nama Produk:%20[Masukkan%20nama%20produk%20di%20sini]%0A%0ATerima%20kasih!%20Saya%20tunggu%20responnya.%20😊">
           <i class="fa-brands fa-whatsapp" style="font-size: 25px; margin-top: 13px;"></i>
         </a>
 
