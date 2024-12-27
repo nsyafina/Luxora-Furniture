@@ -167,7 +167,7 @@ class Barang extends CI_Controller
             $field_name = "gambar";
             if (!$this->upload->do_upload($field_name)) {
                 $data = array(
-                    'title' => 'Edit Barang',
+                    'title' => 'Edit Produk',
                     'kategori' => $this->m_kategori->get_all_data(),
                     'barang' => $this->m_barang->get_data($id_barang),
                     'error_upload' => $this->upload->display_errors(),

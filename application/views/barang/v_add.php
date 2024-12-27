@@ -18,14 +18,14 @@
 
             <div class="form-group">
                 <label style="color: #0b544b;">Nama Produk</label>
-                <input style="border: 2px solid #0b544b;" name="nama_barang" class="form-control" placeholder="Nama Barang ..." value="<?= set_value('nama_barang') ?>">
+                <input required style="border: 2px solid #0b544b;" name="nama_barang" class="form-control" placeholder="Nama Barang ..." value="<?= set_value('nama_barang') ?>">
             </div>
             <div class="row">
                 <div class="col-sm-4">
                     <!-- text input -->
                     <div class="form-group">
                         <label style="color: #0b544b;">Kategori</label>
-                        <select style="border: 2px solid #0b544b;" name="id_kategori" class="form-control">
+                        <select required style="border: 2px solid #0b544b;" name="id_kategori" class="form-control">
                             <option value="">-Pilih Kategori-</option>
                             <?php foreach ($kategori as $key => $value) { ?>
                                 <option value="<?= $value->id_kategori ?>"><?= $value->nama_kategori ?></option>
@@ -36,13 +36,13 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label style="color: #0b544b;">Harga</label>
-                        <input style="border: 2px solid #0b544b;" name="harga" class="form-control" placeholder="Harga Barang ..." value="<?= set_value('harga') ?>">
+                        <input required style="border: 2px solid #0b544b;" name="harga" class="form-control" placeholder="Harga Barang ..." value="<?= set_value('harga') ?>">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label style="color: #0b544b;">Berat (Kg)</label>
-                        <input style="border: 2px solid #0b544b;" type="number" name="berat" min="0" class="form-control" placeholder="Berat Dalam Satuan Kilogram ..." value="<?= set_value('berat') ?>">
+                        <input required style="border: 2px solid #0b544b;" type="number" name="berat" min="0" class="form-control" placeholder="Berat Dalam Satuan Kilogram ..." value="<?= set_value('berat') ?>">
                     </div>
                 </div>
             </div>
@@ -50,19 +50,19 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label style="color: #0b544b;">Material</label>
-                        <input style="border: 2px solid #0b544b;" name="material" class="form-control" placeholder="Material Barang ..." value="<?= set_value('material') ?>">
+                        <input required style="border: 2px solid #0b544b;" name="material" class="form-control" placeholder="Material Barang ..." value="<?= set_value('material') ?>">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label style="color: #0b544b;">Warna</label>
-                        <input style="border: 2px solid #0b544b;" name="warna" class="form-control" placeholder="Warna Barang ..." value="<?= set_value('warna') ?>">
+                        <input required style="border: 2px solid #0b544b;" name="warna" class="form-control" placeholder="Warna Barang ..." value="<?= set_value('warna') ?>">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label style="color: #0b544b;">Kapasitas</label>
-                        <input style="border: 2px solid #0b544b;" name="kapasitas" class="form-control" placeholder="Kapasitas Barang ..." value="<?= set_value('kapasitas') ?>">
+                        <input required style="border: 2px solid #0b544b;" name="kapasitas" class="form-control" placeholder="Kapasitas Barang ..." value="<?= set_value('kapasitas') ?>">
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label style="color: #0b544b;">Gambar</label>
-                        <input style="border: 2px solid #0b544b; height: 45px;" type="file" name="gambar" class="form-control" id="preview_gambar" required>
+                        <input required style="border: 2px solid #0b544b; height: 45px;" type="file" name="gambar" class="form-control" id="preview_gambar" required>
                     </div>
                 </div>
 

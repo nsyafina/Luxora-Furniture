@@ -36,7 +36,7 @@ class Autentifikasi extends CI_Controller
                 ));
                 redirect('admin');
             } else {
-                $this->session->set_flashdata('error', 'Email atau password salah!');
+                $this->session->set_flashdata('error', 'Username atau password salah!');
                 redirect('autentifikasi/login_admin');
             }
         }
