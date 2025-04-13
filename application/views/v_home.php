@@ -582,7 +582,7 @@
           <div class="mt-4 sm:mx-4 sm:mt-0">
             <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Siti Najla Syafina</h1>
 
-            <p class=" nim-team mt-2 capitalize ">Leader of the team || 15210232</p>
+            <p class=" nim-team mt-2 capitalize ">15210232</p>
           </div>
         </div>
 
@@ -619,7 +619,7 @@
           <div class="mt-4 sm:mx-4 sm:mt-0">
             <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Silmi Rahmadina</h1>
 
-            <p class=" nim-team mt-2 capitalize ">Member 1 || 15220277</p>
+            <p class=" nim-team mt-2 capitalize ">15220277</p>
           </div>
         </div>
 
@@ -651,16 +651,16 @@
 
       <div data-aos="fade-up" data-aos-duration="1000" style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
-          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/sarah2.jpg" alt="">
+          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/rahman2.jpg" alt="">
 
           <div class="mt-4 sm:mx-4 sm:mt-0">
-            <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Sarah Nurhalizah</h1>
+            <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Rahman Nurhadi</h1>
 
-            <p class=" nim-team mt-2 capitalize ">Member 2 || 15220695</p>
+            <p class=" nim-team mt-2 capitalize ">15220161</p>
           </div>
         </div>
 
-        <p class=" des-team mt-4 capitalize">Memiliki pengalaman dalam pemasaran dan komunikasi, bertugas membangun hubungan yang kuat dengan pelanggan dan memastikan setiap produk ditemukan oleh mereka yang tepat.</p>
+        <p class=" des-team mt-4 capitalize">Pengembang web yang bersemangat dengan latar belakang kuat di bidang Ilmu Komputer. Senang mengeksplorasi teknologi baru dan mengatasi tantangan teknis.</p>
 
         <div class="flex mt-4 -mx-2">
           <a href="#" class="mx-2 icon-team" aria-label="linkedin">
@@ -688,16 +688,53 @@
 
       <div data-aos="fade-up" data-aos-duration="1000" style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
-          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/ical.jpg" alt="">
+          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/rangga2.jpg" alt="">
 
           <div class="mt-4 sm:mx-4 sm:mt-0">
-            <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Teuku Vaickal Rizki.I</h1>
+            <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Rangga Ryantico</h1>
 
-            <p class=" nim-team mt-2 capitalize ">Member 3 || 15220658</p>
+            <p class=" nim-team mt-2 capitalize ">15220089</p>
           </div>
         </div>
 
         <p class=" des-team mt-4 capitalize">Programmer yang antusias dan terampil dengan dasar yang kuat dalam Ilmu Komputer dan hasrat untuk pengembangan web. Mahir dalam pemecahan masalah dan berkomitmen untuk terus belajar.</p>
+
+        <div class="flex mt-4 -mx-2">
+          <a href="#" class="mx-2 icon-team" aria-label="linkedin">
+            <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+            </svg>
+          </a>
+
+          <a href="#" class="mx-2 icon-team " aria-label="Facebook">
+            <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
+          </a>
+
+          <a href="#" class="mx-2 icon-team " aria-label="Github">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1000" style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
+        <div class="flex flex-col sm:-mx-4 sm:flex-row">
+          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/revan2.jpg" alt="">
+
+          <div class="mt-4 sm:mx-4 sm:mt-0">
+            <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Revanda Ghofar. P </h1>
+
+            <p class=" nim-team mt-2 capitalize ">15220095</p>
+          </div>
+        </div>
+
+        <p class=" des-team mt-4 capitalize">Seorang programmer yang berdedikasi dan memiliki keterampilan kuat dalam Ilmu Komputer, dengan minat mendalam pada pengembangan web.</p>
 
         <div class="flex mt-4 -mx-2">
           <a href="#" class="mx-2 icon-team" aria-label="linkedin">
