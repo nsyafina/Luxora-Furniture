@@ -43,7 +43,7 @@
 
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label style="color: #0b544b;">No Telpon</label>
+                        <label style="color: #0b544b;">Nomor Telepon</label>
                         <input style="border: 2px solid #0b544b;" type="text" name="no_telpon" class="form-control" value="<?= $setting->no_telpon ?>" required>
                     </div>
                 </div>

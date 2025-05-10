@@ -23,6 +23,10 @@
         background-position: fixed;
     }
 
+    * {
+        font-family: serif;
+    }
+
     .card {
         background: rgba(255, 255, 255, 0.3);
         border-top: 4px solid #0b544b;
@@ -127,7 +131,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <div class="input-group">
-                            <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="text" name="no_telp" class="form-control" placeholder="No Telp">
+                            <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="text" name="no_telp" class="form-control" placeholder="Nomor Telepon">
                             <div class="input-group-append">
                                 <div class="input-group-text" style="background: #0b544b; color: white; border: 1px solid rgba(11, 84, 75, 1);">
                                     <span class="fas fa-phone"></span>
@@ -151,7 +155,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <div class="input-group">
-                            <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="password" name="ulangi_password" class="form-control" placeholder="Retype password">
+                            <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="password" name="ulangi_password" class="form-control" placeholder="Ulangi Password">
                             <div class="input-group-append">
                                 <div class="input-group-text" style="background: #0b544b; color: white; border: 1px solid rgba(11, 84, 75, 1);">
                                     <span class="fas fa-lock"></span>
@@ -163,12 +167,12 @@
 
                 <!-- Tombol Register -->
                 <div class="col-10" style="margin: auto;">
-                    <button type="submit" class="btn btn-login btn-block">Register</button>
+                    <button type="submit" class="btn btn-login btn-block">Daftar</button>
                 </div>
                 <?php echo form_close() ?>
 
                 <p class="mb-0 mt-3 text-center text-white">
-                    Already have an account? <a href="<?= base_url('autentifikasi/login_admin') ?>" class="text-center text-white border-bottom">Login</a>
+                    Sudah Punya Akun? <a href="<?= base_url('autentifikasi/login_admin') ?>" class="text-center text-white text-bold border-bottom">Masuk!</a>
                 </p>
         </div>
         <!-- /.card-body -->

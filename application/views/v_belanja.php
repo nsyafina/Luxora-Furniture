@@ -20,7 +20,7 @@
                 <th class="text-center p-2">Gambar</th>
                 <th class="text-center p-2">Produk</th>
                 <th class="text-center p-2">Berat</th>
-                <th class="text-center p-2">QTY</th>
+                <th class="text-center p-2">Jumlah</th>
                 <th class="text-center p-2">Harga</th>
                 <th class="text-center p-2">Sub-Total</th>
                 <th class="text-center p-2">Hapus</th>
@@ -62,8 +62,8 @@
     </table>
 
     <div class="flex justify-end mt-4">
-        <button type="submit" class="inline-block rounded btn-cart-update px-8 py-3 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-teal-700"><i class="fa fa-save"></i> Update Cart</button>
-        <a href="<?= base_url('belanja/clear') ?>" class="inline-block btn-cart-clear px-8 py-3 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-red-800"><i class="fa fa-recycle"></i> Clear Cart</a>
+        <button type="submit" class="inline-block rounded btn-cart-update px-8 py-3 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-teal-700"><i class="fa fa-save"></i> Update</button>
+        <a href="<?= base_url('belanja/clear') ?>" class="inline-block btn-cart-clear px-8 py-3 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-red-800"><i class="fa fa-recycle"></i> Hapus Semua</a>
         <a href="<?= base_url('belanja/checkout') ?>" class="inline-block rounded btn-cart-checkout px-8 py-3 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-yellow-700"><i class="fa fa-check-square"></i> Check Out</a>
     </div>
     <?php echo form_close(); ?>

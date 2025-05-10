@@ -30,7 +30,7 @@
                     </span>
                 </div>
                 <p class="mt-4 text-lg italic font-medium text-teal-800 text-center md:text-left">
-                    "Your Satisfaction, Our Priority"
+                    "Kepuasan Anda, Prioritas Kami"
                 </p>
                 <a href="<?= base_url('pelanggan/edit'); ?>"
                     class="btn-edit-profil">
@@ -40,7 +40,7 @@
 
             <!-- Profile Details -->
             <div class="col-span-2">
-                <h1 class="text-4xl font-extrabold mb-4 title-edit" style="text-align: left !important;"><span><i class="fa-solid fa-user"></i> My</span> Profile</h1>
+                <h1 class="text-4xl font-extrabold mb-4 title-edit" style="text-align: left !important;"><span><i class="fa-solid fa-user"></i> Profil</span> Saya</h1>
                 <div class="rounded-lg p-6" style="background-color: #f6f0e7 ; border: 1px solid rgba(11, 84, 75, 0.6);">
                     <p class="text-lg mb-2 text-teal-800" style="padding-bottom:5px;  border-bottom: 1px solid #c7b198">
                         <span class="font-bold">Nama :</span> <?= $pelanggan->nama_pelanggan; ?>

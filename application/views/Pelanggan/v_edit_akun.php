@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-10 mt-4 mb-4 card card-edit-akun">
-            <h2 class="title-edit"><i class="fa-solid fa-user-pen"></i> Edit <span>Profile</span></h2>
+            <h2 class="title-edit"><i class="fa-solid fa-user-pen"></i> Edit <span>Profil</span></h2>
             <?= form_open_multipart('pelanggan/edit'); ?>
             <div class="form-group row mt-4">
                 <!-- Baris Nama, Email, dan No. Telp -->
@@ -17,7 +17,7 @@
                     <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
                 <div class="col-md-4">
-                    <label style="color: #0b544b;" for="no_telp" class="col-form-label">No. Telpon</label>
+                    <label style="color: #0b544b;" for="no_telp" class="col-form-label">Nomor Telepon</label>
                     <input style="border: 2px solid #0b544b;" type="text" class="form-control" id="no_telp" name="no_telp" value="<?= set_value('no_telp', $pelanggan->no_telp); ?>">
                     <?= form_error('no_telp', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
@@ -38,7 +38,7 @@
                             <input style="border: 2px solid #0b544b; height: 45px;" style="height: 45px;" type="file" name="foto" class="form-control" id="preview_gambar">
                         </div>
                         <div class="col-md-12 mt-3">
-                            <label style="color: #0b544b;" for="password" class="col-form-label">Password</label>
+                            <label style="color: #0b544b;" for="password" class="col-form-label">Sandi</label>
                             <input style="border: 2px solid #0b544b;" type="password" name="password" id="password"
                                 class="mt-1 block w-full px-3 py-2 rounded-md shadow-sm sm:text-sm"
                                 placeholder="Minimal 6 Karakter">

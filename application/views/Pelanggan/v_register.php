@@ -13,7 +13,7 @@
             <main class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
                 <div class="max-w-xl lg:max-w-3xl">
                     <h1 class="text-2xl font-bold text-teal-800 sm:text-3xl md:text-4xl" style="font-size: 2.5rem;">
-                        Register <span style="color: #c41212;">Account</span>
+                        Daftar <span style="color: #c41212;">Akun</span>
                     </h1>
 
                     <!-- PHP Alerts -->
@@ -64,7 +64,7 @@
                     <form method="post" action="<?= base_url('pelanggan/register') ?>" class="mt-8 grid grid-cols-6 gap-6">
                         <!-- Form fields -->
                         <div class="col-span-6">
-                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">Name</label>
+                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">Nama</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-3 flex items-center text-teal-800">
                                     <i class="fas fa-user"></i>
@@ -96,7 +96,7 @@
                         </div>
 
                         <div class="col-span-6 sm:col-span-3">
-                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">No. Telp</label>
+                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">Nomor Telepon</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-3 flex items-center text-teal-800">
                                     <i class="fas fa-phone"></i>
@@ -112,7 +112,7 @@
                         </div>
 
                         <div class="col-span-6 sm:col-span-3">
-                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">Password</label>
+                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">Sandi</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-3 flex items-center text-teal-800">
                                     <i class="fas fa-lock"></i>
@@ -128,7 +128,7 @@
                         </div>
 
                         <div class="col-span-6 sm:col-span-3">
-                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">Password Confirmation</label>
+                            <label class="block font-medium text-teal-700" style="font-size: 1rem;">Konfirmasi Sandi</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-3 flex items-center text-teal-800">
                                     <i class="fas fa-lock"></i>
@@ -145,12 +145,12 @@
 
                         <div class="col-span-4 flex items-center">
                             <p class="mt-2 text-teal-700" style="font-size: 1rem;">
-                                Sudah punya akun? <a href="<?= base_url('pelanggan/login') ?>" class="text-red-600 underline hover:underline">Login</a>
+                                Sudah punya akun? <a href="<?= base_url('pelanggan/login') ?>" class="text-red-600 underline hover:underline">Masuk</a>
                             </p>
                         </div>
 
                         <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-                            <button type="submit" class="btn btn-login btn-block">Create an account</button>
+                            <button type="submit" class="btn btn-login btn-block">Daftar</button>
                         </div>
                     </form>
                 </div>

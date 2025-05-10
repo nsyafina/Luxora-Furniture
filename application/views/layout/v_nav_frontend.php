@@ -16,7 +16,7 @@
             <!-------------------------- Home -------------------------->
             <li>
               <a class="nav-menu <?= uri_string() === '' || uri_string() === 'home' ? 'active' : '' ?>"
-                href="<?= base_url('home') ?>" href="<?= base_url() ?>"> Home </a>
+                href="<?= base_url('home') ?>" href="<?= base_url() ?>"> Beranda </a>
             </li>
             <!-------------------------- Home -------------------------->
 
@@ -33,7 +33,7 @@
                     <a
                       href="#"
                       class="nav-menu <?= ($this->uri->segment(1) == 'home' && $this->uri->segment(2) == 'kategori') || $this->uri->segment(2) === 'detail_barang' ? 'active' : '' ?>">
-                      Category Products
+                      Kategori Produk
                       <i class="fa-solid fa-caret-down"></i>
                       </svg>
                     </a>
@@ -66,7 +66,7 @@
             <!----------------------- Testimonial ---------------------->
             <li>
               <a class="nav-menu <?= $this->uri->segment(2) === 'testimonial' ? 'active' : '' ?>"
-                href="<?= base_url('home/#testimonial') ?>">Testimonial</a>
+                href="<?= base_url('home/#testimonial') ?>">Testimoni</a>
             </li>
             <!----------------------- Testimonial ---------------------->
 
@@ -131,7 +131,7 @@
                   </a>
                   <!-- barang End -->
                   <div class="dropdown-divider"></div>
-                  <a href="<?= base_url('belanja') ?>" class="view-chart dropdown-item dropdown-footer">View Chart</a>
+                  <a href="<?= base_url('belanja') ?>" class="view-chart dropdown-item dropdown-footer">Detail Keranjang</a>
                   <a href="<?= base_url('belanja/checkout') ?>" class="checkout dropdown-item dropdown-footer">Check Out</a>
                 <?php } ?>
               </div>
@@ -153,14 +153,14 @@
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="margin-right: 20px; border-radius: 7px;">
                   <div class="dropdown-divider"></div>
                   <a href="<?= base_url('pelanggan/akun') ?>" class="dropdown-akun dropdown-item">
-                    <i class="fas fa-user mr-2"></i> My Profile
+                    <i class="fas fa-user mr-2"></i> Profil Saya
                   </a>
                   <div class="dropdown-divider"></div>
                   <a href="<?= base_url('pesanan_saya') ?>" class="dropdown-pesanan dropdown-item">
                     <i class="fas fa-shopping-cart mr-2"></i> Pesanan Saya
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="<?= base_url('pelanggan/logout') ?>" class="dropdown-logout dropdown-item dropdown-footer">Logout</a>
+                  <a href="<?= base_url('pelanggan/logout') ?>" class="dropdown-logout dropdown-item dropdown-footer">Keluar</a>
                 </div>
               <?php } ?>
             </li>

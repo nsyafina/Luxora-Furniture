@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <a href="<?= base_url('admin/pesanan_masuk'); ?>" class="small-box-footer" style="color: #12389f;">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <a href="<?= base_url('admin/pesanan_masuk'); ?>" class="small-box-footer" style="color: #12389f;"> Detail Info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </div>
 
@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <a href="<?= base_url('barang') ?>" class="small-box-footer" style="color: #02D702;">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <a href="<?= base_url('barang') ?>" class="small-box-footer" style="color: #02D702;"> Detail Info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </div>
 
@@ -56,8 +56,8 @@
             <div class="row align-items-center" style="padding-bottom: 0px;">
                 <div class="col mr-2">
                     <div class="h2 mb-0 font-weight-bold" style="color: orange; font-size: 40px; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);"><?= $total_pelanggan ?></div>
-                    <div class="font-weight-bold text-uppercase mb-1" style="color: orange; font-size: 16px; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);">
-                        Total Customer
+                    <div class="font-weight-bold text-uppercase mb-1" style="color: orange; font-size: 15px; -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);">
+                        Total Pelanggan
                     </div>
                 </div>
                 <div class="col-auto">
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <a href="<?= base_url('pelanggan'); ?>" class="small-box-footer" style="color: orange;">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <a href="<?= base_url('pelanggan'); ?>" class="small-box-footer" style="color: orange;"> Detail Info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </div>
 
@@ -84,6 +84,6 @@
                 </div>
             </div>
         </div>
-        <a href="<?= base_url('kategori') ?>" class="small-box-footer" style="color: #c90000;">More info <i class="fas fa-arrow-circle-right"></i></a>
+        <a href="<?= base_url('kategori') ?>" class="small-box-footer" style="color: #c90000;"> Detail Info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
 </div>

@@ -3,7 +3,7 @@
     <div data-aos="fade-right" data-aos-duration="1000" class="banner-vertical-kategori"></div>
     <div>
         <!----------------- Title Kategori ------------------>
-        <h1 data-aos="fade-up" data-aos-duration="1000" class="title-kategori"><span><?= $title ?></span> Category</h1>
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="title-kategori">Kategori <span><?= $title ?></span></h1>
         <p data-aos="fade-up" data-aos-duration="1000" class="des-title-kategori">Temukan koleksi terbaik kami untuk setiap ruangan.</p>
         <!----------------- Title Kategori ------------------>
 
@@ -39,7 +39,7 @@
                             <a
                                 class="inline-block rounded btn-produk-detail px-3 py-2 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-yellow-500"
                                 href="<?= base_url('home/detail_barang/' . $value->id_barang) ?>" style="margin-left: px;">
-                                <i class="fa-solid fa-circle-info"></i> View Detail
+                                <i class="fa-solid fa-circle-info"></i> Lihat Detail
                             </a>
                         </div>
                     </article>

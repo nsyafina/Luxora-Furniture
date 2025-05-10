@@ -14,7 +14,7 @@ class Pelanggan extends CI_Controller
     public function index($offset = 0)
     {
         $data = array(
-            'title' => '<i class="nav-icon fas fa-users"></i> Data Customer',
+            'title' => '<i class="nav-icon fas fa-users"></i> Data Pelanggan',
             'pelanggan' => $this->m_pelanggan->get_all_data(),
             'isi' => 'v_customer',
         );

@@ -24,7 +24,7 @@ class Home extends CI_Controller
 	public function detail_barang($id_barang)
 	{
 		$data = array(
-			'title' => 'Detail Product',
+			'title' => 'Detail Produk',
 			'barang' => $this->m_home->detail_barang($id_barang),
 			'isi' => 'v_detail_barang'
 		);

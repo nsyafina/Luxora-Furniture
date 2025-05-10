@@ -4,7 +4,7 @@
         <div class="col-lg-12 card" style="border-radius: 10px; background: #F2EDDB; border-top: 4px solid #0b544b;
         border-bottom: 4px solid #0b544b; padding: 30px;">
             <h2 class="text-center fw-bold" style="color: #0b544b;">
-                <i class="fas fa-solid fa-user-edit"></i> <strong>Edit <span style="color: #c41212;">Profile</strong></span>
+                <i class="fas fa-solid fa-user-edit"></i> <strong>Edit <span style="color: #c41212;">Profil</strong></span>
             </h2>
             <?= form_open_multipart('admin/edit'); ?>
 
@@ -28,7 +28,7 @@
 
                 <!-- No. Telpon -->
                 <div class="col-md-4 mb-3">
-                    <label for="no_telp" class="fw-bold" style="color: #0b544b;">No. Telpon</label>
+                    <label for="no_telp" class="fw-bold" style="color: #0b544b;">Nomoer Telepon</label>
                     <input type="text" class="form-control" id="no_telp" name="no_telp" value="<?= set_value('no_telp', $user->no_telp); ?>"
                         style="border: 2px solid #0b544b; background-color: #fffdf7;">
                     <?= form_error('no_telp', '<small class="text-danger">', '</small>'); ?>

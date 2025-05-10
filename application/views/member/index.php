@@ -32,17 +32,17 @@
                     </div>
                 </div>
                 <p class="mt-4 fst-italic fw-medium" style="color: #0b544b;">
-                    "Your Satisfaction, Our Priority"
+                    "Kepuasan Anda, Prioritas Kami"
                 </p>
                 <a href="<?= base_url('admin/edit'); ?>" class="btn btn-edit-profile">
-                    <i class="fas fa-user-edit me-2"></i> Edit Profile
+                    <i class="fas fa-user-edit me-2"></i> Edit Profil
                 </a>
             </div>
 
             <!-- Profile Details -->
             <div class="col-md-8">
                 <h1 class="card-title fw-bold mb-7 ml-4" style="color: #0b544b; font-size: 2rem;">
-                    <i class="fas fa-solid fa-user"></i> My<span style="color: #c41212;"> Profile</span>
+                    <i class="fas fa-solid fa-user"></i> Profil<span style="color: #c41212;"> Saya</span>
                 </h1>
                 <div class="card-body mt-4">
                     <div class="p-4 rounded" style="background-color: #e0eeec; border: 1px solid #d8ccc5;">

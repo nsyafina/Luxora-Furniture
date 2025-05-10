@@ -14,8 +14,8 @@
                 <a href="<?= base_url('autentifikasi/login_admin') ?>"><img src="<?php echo base_url('img/logo/long_logo.png'); ?>" class="img-footer"></a>
 
                 <ul class="mt-7 space-y-1 text-md text-gray-700 ">
-                    <li>Monday to Friday: 10am - 5pm</li>
-                    <li>Weekend: 10am - 3pm</li>
+                    <li>Senin - Jum'at : 10.00 - 17.00 WIB</li>
+                    <li>Sabtu - Minggu : 10.00 - 21.00 WIB</li>
                 </ul>
 
                 <ul class="mt-8 flex gap-6">
@@ -105,37 +105,37 @@
 
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                    <p class="font-bold text-white">Category Products</p>
+                    <p class="font-bold text-white">Kategori Produk</p>
 
                     <ul class="mt-6 space-y-4 text-md">
                         <li>
-                            <a href="http://localhost/luxora-interiors/home/kategori/4" class="text-gray-300 transition hover:opacity-75"> Bathroom </a>
+                            <a href="http://localhost/luxora-interiors/home/kategori/4" class="text-gray-300 transition hover:opacity-75"> Kamar Mandi </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost/luxora-interiors/home/kategori/3" class="text-gray-300 transition hover:opacity-75"> Bedroom </a>
+                            <a href="http://localhost/luxora-interiors/home/kategori/3" class="text-gray-300 transition hover:opacity-75"> Ruang Keluarga </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost/luxora-interiors/home/kategori/2" class="text-gray-300 transition hover:opacity-75"> Dining Room </a>
+                            <a href="http://localhost/luxora-interiors/home/kategori/2" class="text-gray-300 transition hover:opacity-75"> Ruang Makan </a>
                         </li>
 
                         <li>
-                            <a href="http://localhost/luxora-interiors/home/kategori/1" class="text-gray-300 transition hover:opacity-75"> Living Room </a>
+                            <a href="http://localhost/luxora-interiors/home/kategori/1" class="text-gray-300 transition hover:opacity-75"> Kamar Tidur </a>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <p class="font-bold text-white">Company</p>
+                    <p class="font-bold text-white">Toko</p>
 
                     <ul class="mt-6 space-y-4 text-md">
                         <li>
-                            <a href="#" class="text-gray-300 transition hover:opacity-75"> About </a>
+                            <a href="#" class="text-gray-300 transition hover:opacity-75"> Tentang Toko Kami </a>
                         </li>
 
                         <li>
-                            <a href="#" class="text-gray-300 transition hover:opacity-75"> Testimonials </a>
+                            <a href="#" class="text-gray-300 transition hover:opacity-75"> Testimoni </a>
                         </li>
 
                         <li>

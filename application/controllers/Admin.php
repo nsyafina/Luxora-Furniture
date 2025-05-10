@@ -14,7 +14,7 @@ class Admin extends CI_Controller
     public function index()
     {
         $data = array(
-            'title' => '<i class="nav-icon fas fa-tachometer-alt"></i> Dashboard',
+            'title' => '<i class="nav-icon fas fa-tachometer-alt"></i> Beranda',
             'total_barang' => $this->m_admin->total_barang(),
             'total_kategori' => $this->m_admin->total_kategori(),
             'total_transaksi' => $this->m_admin->total_transaksi(),
@@ -53,7 +53,7 @@ class Admin extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $data = array(
-                'title' => '<i class="nav-icon fas fa-cog"></i> Setting',
+                'title' => '<i class="nav-icon fas fa-cog"></i> Pengaturan',
                 'setting' => $this->m_admin->data_setting(),
                 'isi' => 'v_setting'
             );
@@ -120,7 +120,7 @@ class Admin extends CI_Controller
 
             // Tambahkan data user ke array
             $data = [
-                'title' => '<i class="nav-icon fas fa-user"></i> Profile Saya',
+                'title' => '<i class="nav-icon fas fa-user"></i> Profil Saya',
                 'user' => (object) $user, // Kirimkan $user sebagai object
                 'isi' => 'member/index',
             ];
@@ -202,7 +202,7 @@ class Admin extends CI_Controller
 
         // Data untuk ditampilkan di view
         $data = array(
-            'title' => '<i class="nav-icon fas fa-user-edit"></i> Edit Profile',
+            'title' => '<i class="nav-icon fas fa-user-edit"></i> Edit Profil',
             'user' => $user, // Data user yang akan diedit
             'isi' => 'member/ubahprofil',
         );

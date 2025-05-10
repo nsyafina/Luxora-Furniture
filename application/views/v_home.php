@@ -3,7 +3,7 @@
   <div class="p-8 md:p-12 lg:px-16 lg:py-24">
     <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
       <h2 class="font-bold text-white">
-        <span>Redefine Your</span> Home's Elegance
+        Estetika Baru untuk Rumah Anda
       </h2>
 
       <p class="hidden text-gray-300 md:mt-4 md:block">
@@ -24,7 +24,7 @@
 
 
 <!------ FEATURED CATEGORY ------->
-<h1 class="title-fc" data-aos="fade-up" data-aos-duration="1000">Featured <span>Category</span></h1>
+<h1 class="title-fc" data-aos="fade-up" data-aos-duration="1000">Kategori <span>Unggulan</span></h1>
 <p class="des-title-fc" data-aos="fade-up" data-aos-duration="1000">Temukan koleksi terbaik kami untuk setiap ruangan.</p>
 <div data-aos="fade-up" data-aos-duration="1000" class=" container-fc grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-3" style="margin-bottom: 15rem;">
   <div class="h-32 rounded-lg bg-gray-200">
@@ -35,9 +35,9 @@
         class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
       <div class="relative p-4 sm:p-6 lg:p-8">
-        <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Category</p>
+        <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Kategori</p>
 
-        <p class="text-xl font-bold text-white sm:text-2xl">Bedroom</p>
+        <p class="text-xl font-bold text-white sm:text-2xl">Kamar Tidur</p>
 
         <div class="mt-32 sm:mt-48 lg:mt-64">
           <div
@@ -60,9 +60,9 @@
         class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
       <div class="relative p-4 sm:p-6 lg:p-8">
-        <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Category</p>
+        <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Kategori</p>
 
-        <p class="text-xl font-bold text-white sm:text-2xl">Dining Room</p>
+        <p class="text-xl font-bold text-white sm:text-2xl">Ruang Makan</p>
 
         <div class="mt-32 sm:mt-48 lg:mt-64">
           <div
@@ -85,9 +85,9 @@
         class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
       <div class="relative p-4 sm:p-6 lg:p-8">
-        <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Category</p>
+        <p class="text-sm font-medium uppercase tracking-widest text-pink-500">Kategori</p>
 
-        <p class="text-xl font-bold text-white sm:text-2xl">Living Room</p>
+        <p class="text-xl font-bold text-white sm:text-2xl">Ruang Keluarga</p>
 
         <div class="mt-32 sm:mt-48 lg:mt-64">
           <div
@@ -107,7 +107,7 @@
 
 <!------------ ABOUT ------------->
 <h1 data-aos="fade-up" data-aos-duration="1000" class="title-about absolute"><span>Luxora</span> Interiors</h1><!-- no responsive -->
-<p data-aos="fade-up" data-aos-duration="1000" class="des-title-about absolute">About The Company.</p><!-- no responsive -->
+<p data-aos="fade-up" data-aos-duration="1000" class="des-title-about absolute">Tentang Toko Kami</p><!-- no responsive -->
 <section data-aos="fade-up" data-aos-duration="1000" class="container-about">
   <div class=" mx-auto max-w-screen-2xl px-4 py-10 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
@@ -126,7 +126,7 @@
 
         <div class="p-8 sm:p-16 lg:p-24">
           <h2 class="text-2xl font-bold sm:text-3xl tagline-about">
-            Bringing Timeless Elegance to Your Home.
+            Menghadirkan Keanggunan yang Tak Lekang oleh Waktu di Rumah Anda.
           </h2>
 
           <p class="mt-4 des-about">
@@ -209,7 +209,7 @@
   keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
   keenSliderNext.addEventListener('click', () => keenSlider.next())
 </script>
-<h1 data-aos="fade-up" data-aos-duration="1000" class="title-testi" id="testimonial">Testi<span>monial</span></h1>
+<h1 data-aos="fade-up" data-aos-duration="1000" class="title-testi" id="testimonial">Testi<span>moni</span></h1>
 <p data-aos="fade-up" data-aos-duration="1000" class="des-title-testi">Temukan beberapa penilaian toko ini dari customer kami.</p>
 <section data-aos="fade-up" data-aos-duration="1000" style="background: transparent;">
   <div class="mx-auto max-w-screen-xl px-4  sm:px-6 lg:px-8">
@@ -529,7 +529,7 @@
 <section data-aos="fade-up" data-aos-duration="1000" class="container-galeri text-gray-600 body-font">
   <div class="container-galeri mx-auto flex flex-wrap">
     <div class=" flex w-full mb-4 flex-wrap">
-      <h1 class="title-galeri" style="color: #0b544b;">Gallery <span style="color: #c41212;">Luxora Interiors</span></h1>
+      <h1 class="title-galeri" style="color: #0b544b;">Galeri <span style="color: #c41212;">Luxora Interiors</span></h1>
       <p class="des-title-galeri">Dari desain modern hingga sentuhan elegan, kami memastikan setiap detail menciptakan harmoni sempurna untuk rumah impian Anda.</p>
     </div>
     <div class="flex flex-wrap md:-m-2 -m-1">
@@ -570,8 +570,8 @@
 
 
 <!---------- OUR TEAM ------------>
-<h1 data-aos="fade-up" data-aos-duration="1000" class="title-team">Our <span>Executive Team</span></h1>
-<p data-aos="fade-up" data-aos-duration="1000" class="des-title-team">Team Project Akhir Web Programming 3</p>
+<h1 data-aos="fade-up" data-aos-duration="1000" class="title-team">Tim <span>Pengembang Proyek</span></h1>
+<p data-aos="fade-up" data-aos-duration="1000" class="des-title-team">Anggota kelompok proyek akhir Rekayasa Perangkat Lunak</p>
 <section data-aos="fade-up" data-aos-duration="1000" style="background: transparent;" class="container-team">
   <div class="mx-auto">
     <div class="grid grid-cols-1 gap-4 mt-1 xl:mt-1 md:grid-cols-2 xl:grid-cols-2">
@@ -614,7 +614,7 @@
 
       <div data-aos="fade-up" data-aos-duration="1000" style="background: linear-gradient(45deg, rgba(13, 106, 94, 1) 0%, rgba(67, 153, 142, 1) 47%, rgba(67, 153, 142, 1) 56%, rgba(11, 84, 75, 1) 100%);" class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-teal-800 dark:border-gray-700 dark:hover:border-transparent">
         <div class="flex flex-col sm:-mx-4 sm:flex-row">
-          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/silmi.jpg" alt="">
+          <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="<?= base_url() ?>img/team/mimi.jpg" alt="">
 
           <div class="mt-4 sm:mx-4 sm:mt-0">
             <h1 class=" nama-team text-xl font-semibold capitalize md:text-2xl">Silmi Rahmadina</h1>
@@ -766,7 +766,7 @@
 
 
 <!------------ FAQs -------------->
-<h1 data-aos="fade-up" data-aos-duration="1000" class="title-faq" id="faqs">Frequently Asked <span>Questions (FAQs)</span></h1>
+<h1 data-aos="fade-up" data-aos-duration="1000" class="title-faq" id="faqs">Pertanyaan yang<span> Sering Diajukan (FAQs)</span></h1>
 <p data-aos="fade-up" data-aos-duration="1000" class="des-title-faq mb-2">Temukan informasi sejelas mungkin tantang kami.</p>
 <div data-aos="fade-up" data-aos-duration="1000" class="space-y-4 container-faq mb-3">
   <details class="group rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden" style="background-color: #F2EDDB; border-left: 4px solid #0b544b; border-right: 4px solid #0b544b;" open>

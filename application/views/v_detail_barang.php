@@ -97,7 +97,7 @@
                         echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
                         ?>
                         <button type="submit" class="flex items-center px-4 py-2 rounded font-bold transition btn-merah">
-                            <i class="fa-solid fa-cart-plus mr-2"></i> Add to Cart
+                            <i class="fa-solid fa-cart-plus mr-2"></i> Masukkan ke Keranjang
                         </button>
                         <?php echo form_close(); ?>
                     </div>

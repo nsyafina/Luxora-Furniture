@@ -79,7 +79,7 @@
                                                     </table>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Tutup</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -163,7 +163,7 @@
                                                     </table>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Tutup</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -337,7 +337,7 @@
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-close-modal" data-dismiss="modal">Tutup</button>
                     <button type="submit" class="btn btn-kirim"><i class="fa fa-paper-plane"></i> Kirim</button>
                 </div>
                 <?php echo form_close() ?>

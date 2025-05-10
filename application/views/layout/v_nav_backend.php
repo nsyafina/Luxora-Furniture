@@ -21,7 +21,7 @@
                     } ?>">
                         <i class="nav-icon fas fa-fw fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            Beranda
                         </p>
                     </a>
                 </li>
@@ -61,7 +61,7 @@
                                 class="nav-link nav-dp <?php if ($this->uri->segment(1) == 'pelanggan') echo 'active'; ?>"
                                 style="<?= ($this->uri->segment(1) == 'pelanggan') ? 'color: #0b544b !important;' : ''; ?>">
                                 <i class="nav-icon fas fa-solid fa-users"></i>
-                                <p>Data Customer</p>
+                                <p>Data Pelanggan</p>
                             </a>
                         </li>
 
@@ -108,7 +108,7 @@
                     } ?>">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
-                            Setting
+                            Pengaturan
                         </p>
                     </a>
                 </li>
@@ -117,7 +117,7 @@
                     <a href="<?= base_url('autentifikasi/logout_admin') ?>" class="nav-link">
                         <i class="nav-icon fas fa-fw fa-sign-out-alt"></i>
                         <p>
-                            Log out
+                            Keluar
                         </p>
                     </a>
                 </li>

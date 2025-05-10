@@ -13,11 +13,11 @@
             <main class="flex items-center justify-center px-1 py-1 sm:px-12 lg:col-span-7 lg:px-16 lg:py-1 xl:col-span-6">
                 <div class="max-w-xl lg:max-w-3xl">
                     <h1 class="font-bold text-teal-800" style="font-size: 2.8rem;">
-                        Login <span style="color: #c41212;">Customer</span>
+                        Login <span style="color: #c41212;">Akun</span>
                     </h1>
 
                     <p class="mt-2 leading-relaxed text-teal-700">
-                        Sign in to access your account.
+                        Masuk untuk mengakses akun Anda.
                     </p>
 
                     <!-- PHP Alerts for Email or Password Error -->
@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="col-span-6 mt-2">
-                            <label for="Password" class="block font-medium text-teal-700 mb-2" style="font-size: 1rem;"> Password </label>
+                            <label for="Password" class="block font-medium text-teal-700 mb-2" style="font-size: 1rem;"> Sandi </label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-3 flex items-center text-teal-700">
                                     <i class="fas fa-lock"></i>
@@ -92,7 +92,7 @@
 
                         <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
                             <button type="submit" class="btn btn-login btn-block">
-                                Login
+                                Masuk
                             </button>
                         </div>
                     </form>

@@ -23,6 +23,10 @@
         background-position: fixed;
     }
 
+    * {
+        font-family: serif;
+    }
+
     .card {
         background: rgba(255, 255, 255, 0.3);
         border-top: 4px solid #0b544b;
@@ -100,7 +104,7 @@
                 echo form_open('autentifikasi/login_admin')
                 ?>
                 <div class="input-group mb-3">
-                    <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="text" name="username" class="form-control" placeholder="Username">
+                    <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="text" name="username" class="form-control" placeholder="Masukkan Username Anda">
                     <div class="input-group-append">
                         <div class="input-group-text" style="background: #0b544b; color: white; border: 1px solid rgba(11, 84, 75, 1);">
                             <span class="fas fa-user"></span>
@@ -108,7 +112,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="password" name="password" class="form-control" placeholder="Password">
+                    <input style="border: 1px solid rgba(11, 84, 75, 1); border-radius: 5px 0 0 5px;" type="password" name="password" class="form-control" placeholder="Masukkan Password Anda">
                     <div class="input-group-append">
                         <div class="input-group-text" style="background: #0b544b; color: white; border: 1px solid rgba(11, 84, 75, 1);">
                             <span class="fas fa-lock"></span>
@@ -118,14 +122,14 @@
 
                 <!-- /.col -->
                 <div class="col-10" style="margin: auto;">
-                    <button type="submit" class="btn btn-login btn-block">Login</button>
+                    <button type="submit" class="btn btn-login btn-block">Masuk</button>
                 </div>
                 <!-- /.col -->
                 <?php echo form_close() ?>
 
 
                 <p class="mb-0 mt-3 text-center text-white">
-                    No Account? <a href="register" class="text-center text-white border-bottom">Sign Up</a>
+                    Belum punya akun? <a href="register" class="text-center text-white text-bold border-bottom">Daftar!</a>
                 </p>
         </div>
         <!-- /.card-body -->
